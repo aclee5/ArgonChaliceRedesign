@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
             
             }
         
-            else if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f){
+            if(Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f){
                 if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), 0.2f, whatStopsMovement)){
                     movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);                            
                                 
