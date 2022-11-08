@@ -6,9 +6,11 @@ using UnityEngine;
 public class PlayerData
 {
     public string name; 
+    public int ingredientNum;
 
     public PlayerData(Player player){
         name = player.name;
+        ingredientNum = player.ingredientNum; 
     }
 
 

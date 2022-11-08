@@ -31,6 +31,7 @@ public class SaveSystem : MonoBehaviour
 
             Player player = (Player)FindObjectOfType(typeof(Player));
             player.name = data.name; 
+            player.ingredientNum = data.ingredientNum; 
 
 
         }
