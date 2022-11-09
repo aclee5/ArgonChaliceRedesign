@@ -33800,5 +33800,10 @@ PrefabInstance:
       propertyPath: ingredientCounter
       value: 
       objectReference: {fileID: 1046849336}
+    - target: {fileID: 5564085813631190189, guid: e5b2bb872994fc643b9324887c32d3a3,
+        type: 3}
+      propertyPath: ingredientCounter
+      value: 
+      objectReference: {fileID: 1046849336}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5b2bb872994fc643b9324887c32d3a3, type: 3}
