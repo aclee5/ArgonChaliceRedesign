@@ -12,14 +12,14 @@ public class Player : Character
     public TMP_Text ingredientCounter;
     
     //inventory stuff 
-    private Inventory inventory;
-    public GameObject itemButton;
+    //private Inventory inventory;
+   // public GameObject itemButton;
 
     // Start is called before the first frame update
     void Start()
     {
         ingredientNum = 0;
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         
     }
 
@@ -39,18 +39,18 @@ public class Player : Character
             ingredientNum +=1;
         }
 
-        for(int i=0; i<inventory.slots.Length; i++){
-            if(inventory.isFull[i] == false){
-                //item can be added to inventory
-                inventory.isFull[i] = true;
-                Instantiate(itemButton, inventory.slots[i].transform, false);
-                break;
-            }
-        }
+        // for(int i=0; i<inventory.slots.Length; i++){
+        //     if(inventory.isFull[i] == false){
+        //         //item can be added to inventory
+        //         inventory.isFull[i] = true;
+        //         Instantiate(itemButton, inventory.slots[i].transform, false);
+        //         break;
+        //     }
+        // }
        
 
         
-        Destroy(collider.gameObject);
+        //Destroy(collider.gameObject);
     }
 }
  

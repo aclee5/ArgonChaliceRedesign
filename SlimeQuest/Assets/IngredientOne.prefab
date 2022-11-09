@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1382977108490467971}
   - component: {fileID: 5009414557543011215}
   - component: {fileID: 2439065883799647578}
+  - component: {fileID: -2919228007813168644}
   m_Layer: 0
   m_Name: IngredientOne
   m_TagString: PotionIngredient
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &-2919228007813168644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980889048467797038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d68985ce85152f42ad3cb296d795ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 4724980894197501823, guid: 804dfe7292e910b4fac1d62d23bccaee,
+    type: 3}
