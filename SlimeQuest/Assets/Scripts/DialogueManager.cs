@@ -41,7 +41,12 @@ public class DialogueManager : MonoBehaviour
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
         Actor actorToDisplay = currentActors[messageToDisplay.actorID];
-        actorName.text = actorToDisplay.name; 
+        Character character = actorToDisplay.character.GetComponent<Character>();
+        if (character != null){
+            actorName.text = actorToDisplay.character.GetComponent<Character>().name; 
+
+        }
+       
 
     }
     // Start is called before the first frame update

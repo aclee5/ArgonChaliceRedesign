@@ -20,5 +20,6 @@ public class Message{
 
 [System.Serializable]
 public class Actor{
-    public string name;
+    public GameObject character; 
+    //public string name;
 }
