@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class DialogueManager : MonoBehaviour
 {
+    public Image actorImage; 
     public TMP_Text actorName;
     public TMP_Text messageText;
     public RectTransform backgroundBox;
@@ -46,6 +47,8 @@ public class DialogueManager : MonoBehaviour
             actorName.text = actorToDisplay.character.GetComponent<Character>().name; 
 
         }
+
+        actorImage.sprite = actorToDisplay.sprite; 
        
 
     }
