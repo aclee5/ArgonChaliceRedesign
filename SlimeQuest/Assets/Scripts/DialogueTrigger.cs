@@ -21,5 +21,6 @@ public class Message{
 [System.Serializable]
 public class Actor{
     public GameObject character; 
+    public Sprite sprite; 
     //public string name;
 }
