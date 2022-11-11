@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
     public int state;
 
     //Game States
-    private const int INTRODUCTION = -3;
-    private const int PLAYER_CUSTOMIZATION = -2;
+    private const int START = -4;
+    private const int FINISH = -5; 
+    private const int PLAYER_CUSTOMIZATION = -3;
+    private const int INTRODUCTION = -2;
     private const int DRAGON_DUNGEON = -1;
 
     private const int MAIN_MAP = 0; 
@@ -38,6 +40,28 @@ public class GameManager : MonoBehaviour
 
     public void Restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+    }
+
+    public void loadScene(int scene){
+        switch(scene){
+            case INTRODUCTION:
+                SceneManager.LoadScene("Introduction");
+                break;
+            case MAIN_MAP:
+                SceneManager.LoadScene("Main");
+                break;
+            case PLAYER_CUSTOMIZATION:
+                break; 
+            case INGREDIENT_1:
+                break;
+            case INGREDIENT_2:
+                break;
+            case INGREDIENT_3:
+                break;
+            case DRAGON_DUNGEON:
+                SceneManager.LoadScene("Dragon");
+                break;
+        }
     }
 
 }
