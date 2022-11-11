@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     Actor[] currentActors;
     int activeMessage = 0; 
     public static bool isActive = false;
+    private string playerStandin = "<>";
 
     public void OpenDialogue(Message[] messages, Actor[] actors){
         currentMessages = messages;
@@ -40,11 +41,20 @@ public class DialogueManager : MonoBehaviour
 
     void DisplayMessage(){
         Message messageToDisplay = currentMessages[activeMessage];
+        if(messageToDisplay.message.Contains(playerStandin)){
+            string[] messageSplit = messageToDisplay.message.Split(playerStandin);
+            messageToDisplay.message = string.Join(FindObjectOfType<Player>().characterName, messageSplit);            
+
+        }
+
+
+       
+
         messageText.text = messageToDisplay.message;
         Actor actorToDisplay = currentActors[messageToDisplay.actorID];
         Character character = actorToDisplay.character.GetComponent<Character>();
         if (character != null){
-            actorName.text = actorToDisplay.character.GetComponent<Character>().name; 
+            actorName.text = actorToDisplay.character.GetComponent<Character>().characterName; 
 
         }
 
