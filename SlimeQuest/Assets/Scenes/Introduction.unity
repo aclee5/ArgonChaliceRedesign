@@ -1172,19 +1172,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 2
-    message: "In a rustic house just outside of town, <> lived peacfully with their
-      family including the lovely little Sam live peacefully\u2026 "
+    message: 'In a rustic house just outside of town, <> lived peacfully with their
+      family... '
   - actorID: 2
-    message: "That is until one day\u2026 Sam suddenly falls ill with a mysterious
-      disease\u2026"
+    message: "That is until one day, the lovely little Sam suddenly falls ill with
+      a mysterious disease\u2026"
   - actorID: 2
     message: Not sure how to handle the situation at hand, <> calls upon the Doctor.
       Over the next few months the Doctor watches over Sam.
   - actorID: 2
     message: "But as the situation continues the Doctor is growing weary\u2026"
   - actorID: 1
-    message: "\u201CSam is getting worse, <>.Without treatment I fear they will not
-      live past next week.\u201D "
+    message: Sam is getting worse, <>.Without treatment I fear they will not live
+      past next week.
   - actorID: 0
     message: "Sam will die??! Doctor - You\u2019re saying there\u2019s absolutely
       nothing we can do to help?!"
