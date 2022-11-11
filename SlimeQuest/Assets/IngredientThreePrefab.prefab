@@ -126,3 +126,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 3940843864640572803, guid: f1a7e446a2948554abfd1c4d9dbdeb09,
     type: 3}
+  collectText: {fileID: 8660412549477098789, guid: bee8fdd2c92b51940a8c1af58b3d631c,
+    type: 3}
