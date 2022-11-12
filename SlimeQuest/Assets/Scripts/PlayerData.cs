@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public string name; 
+    public string characterName; 
     public int ingredientNum;
 
     public PlayerData(Player player){
-        name = player.name;
+        characterName = player.characterName;
         ingredientNum = player.ingredientNum; 
     }
 

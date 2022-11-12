@@ -18,6 +18,7 @@ public class Player : Character
     void Start()
     {
         ingredientNum = 0;
+        FindObjectOfType<SaveSystem>().LoadPlayerData();  
         if (string.IsNullOrEmpty(characterName)){
             characterName = "Player"; 
         }
