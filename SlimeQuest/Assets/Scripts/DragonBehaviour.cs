@@ -29,7 +29,7 @@ public class DragonBehaviour : Character
     // Update is called once per frame
     void Update()
     {
-        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && (convoProgress != 3)){
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished &&(convoProgress != 4)){
         
             inventoryOptionButton.SetActive(true);
             noItemOption.SetActive(true); 
@@ -47,9 +47,13 @@ public class DragonBehaviour : Character
         } else if(giftNum == giftTotal){
             convoProgress = 3; 
         }
+        else if (giftNum > giftTotal){
+            convoProgress = 4; 
+        }
         else{
             convoProgress = 2; 
         }
+
         
     }
 
@@ -68,8 +72,9 @@ public class DragonBehaviour : Character
     }
 
     public void NoGiftOption(){
-        convoProgress = -2;
-        StartConvo(convoProgress); 
+        convoProgress = -2; 
+        StartConvo(convoProgress);
+         
     }
 
     public void InventoryOption(){
@@ -81,7 +86,6 @@ public class DragonBehaviour : Character
         {
             case -2:
                 exitTrigger.StartDialogue();
-                convoProgress = -1; 
                 break; 
             case 1:
                 NotEnoughTrigger.StartDialogue();
