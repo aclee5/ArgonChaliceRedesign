@@ -3106,6 +3106,11 @@ PrefabInstance:
       propertyPath: ingredientCounter
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5564085813631190186, guid: e5b2bb872994fc643b9324887c32d3a3,
+        type: 3}
+      propertyPath: playerRigidbody2D
+      value: 
+      objectReference: {fileID: 1432714939}
     - target: {fileID: 5564085813631190189, guid: e5b2bb872994fc643b9324887c32d3a3,
         type: 3}
       propertyPath: itemButton
@@ -3531,6 +3536,12 @@ MonoBehaviour:
   colorBlue: {r: 0, g: 0, b: 1, a: 1}
   colorGreen: {r: 0, g: 1, b: 0, a: 1}
   colorYellow: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+--- !u!50 &1432714939 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5564085813631190187, guid: e5b2bb872994fc643b9324887c32d3a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 958401894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1440361257
 GameObject:
   m_ObjectHideFlags: 0
