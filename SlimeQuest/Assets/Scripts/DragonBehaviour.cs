@@ -16,6 +16,7 @@ public class DragonBehaviour : Character
     public GameObject inventoryOptionButton;
     public GameObject noItemOption;
     public int convoProgress;  
+    private bool exit; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,24 +24,25 @@ public class DragonBehaviour : Character
         giftNum = 0;
         dialogueBox.SetActive(false); 
         convoProgress = 0; 
+        exit = false; 
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished &&(convoProgress != 4)){
-        
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished &&(convoProgress != 4)&& (!exit)){
             inventoryOptionButton.SetActive(true);
             noItemOption.SetActive(true); 
-
            
         }
         else {
             inventoryOptionButton.SetActive(false);
             noItemOption.SetActive(false); 
         }
-
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == -2){
+            convoProgress = -3; 
+        }
         if(giftNum < (0.5*giftTotal)){
             convoProgress = 1; 
 
@@ -74,6 +76,7 @@ public class DragonBehaviour : Character
     public void NoGiftOption(){
         convoProgress = -2; 
         StartConvo(convoProgress);
+        exit = true; 
          
     }
 
