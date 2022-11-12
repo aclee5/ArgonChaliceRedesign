@@ -72,17 +72,21 @@ public class InteractiveTiles : MonoBehaviour
         Debug.Log("count of array: " + playerArray2.Count);
         //if(playerArray2.Count == 4){
             for(int i=0; i< playerArray2.Count; i++){
-              Debug.Log("i: " + playerArray2[i] + "2nd i : " + correctArray[i]);
+              Debug.Log("i: " + playerArray2[i] + " correct i : " + correctArray[i]);
               if(playerArray2[i] == correctArray[i] )
               {
                 
                     Debug.Log("they are same");
                 }
                 else {
+                  Debug.Log(" else i: " + playerArray2[i] + " correct and i : " + correctArray[i]);
                   Debug.Log("NOT THE SAME "); // always thinks they arent the same even when its literally the same omfg
                 }
 
             }
+
+          
+        
         //}
 
         // for(int i=0; i< playerArray2.Count; i++){
