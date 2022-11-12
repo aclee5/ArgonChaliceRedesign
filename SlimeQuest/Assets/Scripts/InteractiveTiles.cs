@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class InteractiveTiles : MonoBehaviour
 {
-    public SpriteRenderer sr;
-    public Color colorA = Color.red;
-    public Color colorB = Color.black;
+    public SpriteRenderer sr, sr2, sr3, sr4, sr5;
+    public Color colorRed = Color.red;
+    public Color colorBlack = Color.black;
+    public Color colorBlue = Color.blue;
+    public Color colorGreen = Color.green;
+    public Color colorYellow = Color.yellow;
+    
     private int size;
 
     //public int[] correctArray = {3,4,1,2}; // fix order later
@@ -20,7 +24,11 @@ public class InteractiveTiles : MonoBehaviour
     {
         size = 0;
         //Debug.Log("start: " +playerArray.Length);
-        sr = GameObject.Find("Square").GetComponent<SpriteRenderer>();
+     
+        sr2 = GameObject.Find("RedSquare").GetComponent<SpriteRenderer>();
+        sr3 = GameObject.Find("GreenSquare").GetComponent<SpriteRenderer>();
+        sr4 = GameObject.Find("BlueSquare").GetComponent<SpriteRenderer>();
+        sr5 = GameObject.Find("YellowSquare").GetComponent<SpriteRenderer>();
         //playerArray = new int[4]; 
         
     }
@@ -28,15 +36,21 @@ public class InteractiveTiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+    //    foreach(int i in playerArray2){
+    //          Debug.Log(i);
+             
+    //         //size++;
+        
+    //     }
+        
+       // Debug.Log("stesting euqals " + playerArray2.Equals(correctArray)); // does not actaully work LOL 
+        
+        
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collider){
-        //size +=1; //every time they theorietically enter a tile then the size of array will go up - max sure to cap at somepoint though later 
-        Debug.Log("testing ");
-        sr.color = colorB;
-        //playerArray[0] =3;
-        //
+      
         //here can test if the correct square is triggered and change its colour 
         //if statements to check which square they hit 
     
@@ -55,23 +69,57 @@ public class InteractiveTiles : MonoBehaviour
              playerArray2.Add(2);
          
            }
-        
-        // foreach(int i in playerArray2){
-        //     Debug.Log(i);
-        //     size++;
-        // }
-
-        foreach(int i in correctArray){
-            foreach(int j in playerArray2){
-                if(i == j){
-                    Debug.Log("IT WORKED : D");
-                } else {
-                    Debug.Log("nope");
+        Debug.Log("count of array: " + playerArray2.Count);
+        //if(playerArray2.Count == 4){
+            for(int i=0; i< playerArray2.Count; i++){
+              Debug.Log("i: " + playerArray2[i] + "2nd i : " + correctArray[i]);
+              if(playerArray2[i] == correctArray[i] )
+              {
+                
+                    Debug.Log("they are same");
                 }
-            }
-        }
+                else{
+                  Debug.Log("NOT THE SAME ");
+                }
 
-        Debug.Log("size" + size);
+            }
+        //}
+
+        // for(int i=0; i< playerArray2.Count; i++){
+        //     // size++; // not accurate but the .Count is 
+        //     // Debug.Log("Size of array: " + size);
+           
+        //     for(int j =0; j<correctArray.Count; j++){
+        //         //Debug.Log("test " + correctArray[j]);
+        //         Debug.Log("i: " + playerArray2[i] + "j: " + correctArray[j]);
+        //         if(playerArray2[i] == correctArray[j] ){
+                
+        //             Debug.Log("they are same");
+        //         }
+        //         else{
+        //           Debug.Log("NOT THE SAME ");
+        //         }
+        //     }
+        // }
+         
+
+        // foreach(int i in correctArray){
+        //     foreach(int j in playerArray2){
+        //         if(i == j){
+        //             Debug.Log("IT WORKED : D");
+        //             sr2.color = colorBlack;
+        //         } else {
+        //             Debug.Log("nope");
+        //             sr2.color = colorRed;
+        //             // sr3.color = colorGreen;
+        //             // sr4.color = colorBlue;
+        //             // sr5.color = colorYellow;
+        //         }
+        //     }
+        // }
+        
+
+       // Debug.Log("size" + size);
        
         // for(int i =0; i < playerArray2.Length; i++){
         //     Debug.Log(playerArray.ToString());
@@ -94,5 +142,6 @@ public class InteractiveTiles : MonoBehaviour
     public void OnTriggerExit2D(Collider2D collider){
         Debug.Log("exited");
         //sr.color = colorA;
+        
     }
 }
