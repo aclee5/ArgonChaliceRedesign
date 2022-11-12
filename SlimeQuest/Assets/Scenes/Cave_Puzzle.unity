@@ -3611,7 +3611,7 @@ MonoBehaviour:
   colorA: {r: 1, g: 0, b: 0, a: 1}
   colorB: {r: 0, g: 0, b: 0, a: 1}
   correctArray: 
-  playerArray: 
+  playerArray: 00000000000000000000000000000000
 --- !u!1 &1440361257
 GameObject:
   m_ObjectHideFlags: 0
