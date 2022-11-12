@@ -78,8 +78,8 @@ public class InteractiveTiles : MonoBehaviour
                 
                     Debug.Log("they are same");
                 }
-                else{
-                  Debug.Log("NOT THE SAME ");
+                else {
+                  Debug.Log("NOT THE SAME "); // always thinks they arent the same even when its literally the same omfg
                 }
 
             }
