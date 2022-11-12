@@ -300,10 +300,136 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 'Wise Dragon '
   giftNum: 0
+  giftTotal: 10
   introTrigger: {fileID: 128744275}
+  exitTrigger: {fileID: 497425927}
+  returnTrigger: {fileID: 1353500170}
+  NotEnoughTrigger: {fileID: 1634485040}
+  CloseTrigger: {fileID: 1078562655}
+  ExceedingTrigger: {fileID: 313261455}
   dialogueBox: {fileID: 1552862816}
   inventoryOptionButton: {fileID: 835801630}
   noItemOption: {fileID: 670055374}
+  convoProgress: 0
+--- !u!1 &313261453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313261454}
+  - component: {fileID: 313261455}
+  m_Layer: 0
+  m_Name: ExceedingDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &313261454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313261453}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -518, y: -406, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632875656}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &313261455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313261453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2c69662bf2c6e4c8f9dbc841e9d430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorID: 1
+    message: I can offer you this, great dragon. I collected this along my way..
+      If it is to your taste.
+  - actorID: 0
+    message: "Ah - I suppose this will do.\u201D Perhaps I will help you after all,
+      little slime. Put your potion down next to me."
+  - actorID: 0
+    message: 'It is completed. You may save your Sam. But I remind you never to venture
+      in here again. '
+  - actorID: 1
+    message: I cannot thank you enough.
+  actors:
+  - character: {fileID: 128744270}
+    sprite: {fileID: 21300000, guid: cd6d49438588ef3488a261d5227e3af5, type: 3}
+  - character: {fileID: 1213305916}
+    sprite: {fileID: 21300000, guid: dd3eb5157eade5d42b6e7aa5d137eea3, type: 3}
+--- !u!1 &497425925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 497425926}
+  - component: {fileID: 497425927}
+  m_Layer: 0
+  m_Name: ExitDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &497425926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497425925}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -518, y: -406, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632875656}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &497425927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497425925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2c69662bf2c6e4c8f9dbc841e9d430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorID: 1
+    message: I can't offer anything else. Please. Help me!
+  - actorID: 0
+    message: That is all?
+  - actorID: 0
+    message: 'Pathetic! I will not be so easily persuaded Slime. '
+  - actorID: 0
+    message: 'Come back to me when you have found me something worthy. '
+  actors:
+  - character: {fileID: 128744270}
+    sprite: {fileID: 21300000, guid: cd6d49438588ef3488a261d5227e3af5, type: 3}
+  - character: {fileID: 1213305916}
+    sprite: {fileID: 21300000, guid: dd3eb5157eade5d42b6e7aa5d137eea3, type: 3}
 --- !u!1 &632875652
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +522,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1974270735}
+  - {fileID: 497425926}
+  - {fileID: 1353500169}
+  - {fileID: 1634485039}
+  - {fileID: 1078562654}
+  - {fileID: 313261454}
   - {fileID: 1552862820}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -684,7 +816,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 835801633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 128744276}
+        m_TargetAssemblyTypeName: DragonBehaviour, Assembly-CSharp
+        m_MethodName: GiftToDragon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 128744276}
+        m_TargetAssemblyTypeName: DragonBehaviour, Assembly-CSharp
+        m_MethodName: InventoryOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &835801633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,6 +1151,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910111950}
   m_CullTransparentMesh: 1
+--- !u!1 &1078562653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1078562654}
+  - component: {fileID: 1078562655}
+  m_Layer: 0
+  m_Name: CloseDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1078562654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078562653}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -518, y: -406, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632875656}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1078562655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078562653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2c69662bf2c6e4c8f9dbc841e9d430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorID: 1
+    message: I can offer you this, great dragon. I collected this along my way..
+      If it is to your taste.
+  - actorID: 0
+    message: " Hmmm\u2026 what interesting items you have procured Slime, but it
+      will take more to pay for my services."
+  actors:
+  - character: {fileID: 128744270}
+    sprite: {fileID: 21300000, guid: cd6d49438588ef3488a261d5227e3af5, type: 3}
+  - character: {fileID: 1213305916}
+    sprite: {fileID: 21300000, guid: dd3eb5157eade5d42b6e7aa5d137eea3, type: 3}
 --- !u!1 &1086316842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,6 +1393,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1353500168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353500169}
+  - component: {fileID: 1353500170}
+  m_Layer: 0
+  m_Name: ReEnterDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1353500169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353500168}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -518, y: -406, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632875656}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1353500170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353500168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2c69662bf2c6e4c8f9dbc841e9d430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorID: 1
+    message: Dragon.. I have returned if you would give me another chance. Please.
+  - actorID: 0
+    message: "Very well\u2026show me what you have slime."
+  actors:
+  - character: {fileID: 128744270}
+    sprite: {fileID: 21300000, guid: cd6d49438588ef3488a261d5227e3af5, type: 3}
+  - character: {fileID: 1213305916}
+    sprite: {fileID: 21300000, guid: dd3eb5157eade5d42b6e7aa5d137eea3, type: 3}
 --- !u!1 &1477553171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,13 +1585,69 @@ RectTransform:
   - {fileID: 1644608469}
   - {fileID: 1086316845}
   m_Father: {fileID: 632875656}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 156}
   m_SizeDelta: {x: -93.399, y: 237.5717}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1634485038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1634485039}
+  - component: {fileID: 1634485040}
+  m_Layer: 0
+  m_Name: NotEnoughDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1634485039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634485038}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -518, y: -406, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632875656}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1634485040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634485038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2c69662bf2c6e4c8f9dbc841e9d430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - actorID: 1
+    message: I can offer you this, great dragon. I collected this along my way..
+      If it is to your taste.
+  - actorID: 0
+    message: 'Hah you think this is enough to satisfy me Slime, its going to cost
+      you more than that.  '
+  actors:
+  - character: {fileID: 128744270}
+    sprite: {fileID: 21300000, guid: cd6d49438588ef3488a261d5227e3af5, type: 3}
+  - character: {fileID: 1213305916}
+    sprite: {fileID: 21300000, guid: dd3eb5157eade5d42b6e7aa5d137eea3, type: 3}
 --- !u!1 &1644608466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,11 +2005,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974270732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -518, y: -406, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 632875656}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
