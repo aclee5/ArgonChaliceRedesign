@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int state;
 
     //Game States
     private const int START = -3;
@@ -37,10 +36,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void UpdateState(int newState){
-        state = newState; 
-    }
-
     public void Restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
@@ -49,7 +44,7 @@ public class GameManager : MonoBehaviour
         switch(scene){
             case INTRODUCTION:
                 SceneManager.LoadScene("Introduction");
-                
+                FindObjectOfType<SaveSystem>().LoadPlayerData();
                 break;
             case MAIN_MAP:
                 SceneManager.LoadScene("Main");
