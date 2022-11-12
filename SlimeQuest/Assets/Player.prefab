@@ -85,7 +85,7 @@ MonoBehaviour:
   movePoint: {fileID: 5564085812699453576}
   whatStopsMovement:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   animator: {fileID: 6167661768892934518}
 --- !u!61 &5564085813631190188
 BoxCollider2D:
@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701cc9d5cb545024aa347673d656e406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
   ingredientNum: 0
-  ingredientCounter: {fileID: 0}
 --- !u!212 &4263107985427770770
 SpriteRenderer:
   m_ObjectHideFlags: 0
