@@ -17,7 +17,7 @@ public class InteractiveTiles : MonoBehaviour
     //public int[] playerArray; 
     
     ArrayList playerArray2 = new ArrayList();
-    ArrayList correctArray = new ArrayList(new int[] {3,4,1,2});
+    ArrayList correctArray = new ArrayList(new string[] {"3","4","1","2"});
 
     // Start is called before the first frame update
     void Start()
@@ -56,17 +56,17 @@ public class InteractiveTiles : MonoBehaviour
     
 
         if(collider.CompareTag("Red")){
-             playerArray2.Add(3);
+             playerArray2.Add("3");
            } 
            if(collider.CompareTag("Green")){
-             playerArray2.Add(4);
+             playerArray2.Add("4");
            } 
            if(collider.CompareTag("Blue")) {
-             playerArray2.Add(1);
+             playerArray2.Add("1");
             
            } 
            if(collider.CompareTag("Yellow")){
-             playerArray2.Add(2);
+             playerArray2.Add("2");
          
            }
         Debug.Log("count of array: " + playerArray2.Count);
