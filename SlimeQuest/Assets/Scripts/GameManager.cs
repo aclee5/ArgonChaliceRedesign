@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    public int state; 
     //Game States
     private const int START = -3;
     private const int INTRODUCTION = -2;
@@ -43,19 +43,23 @@ public class GameManager : MonoBehaviour
     public void loadScene(int scene){
         switch(scene){
             case INTRODUCTION:
+                state = INTRODUCTION; 
                 SceneManager.LoadScene("Introduction");
-                FindObjectOfType<SaveSystem>().LoadPlayerData();
                 break;
             case MAIN_MAP:
+                state = MAIN_MAP; 
                 SceneManager.LoadScene("Main");
                 break;
             case INGREDIENT_1:
+                state = INGREDIENT_1; 
+                SceneManager.LoadScene("Cave_Puzzle");
                 break;
             case INGREDIENT_2:
                 break;
             case INGREDIENT_3:
                 break;
             case DRAGON_DUNGEON:
+                state = DRAGON_DUNGEON; 
                 SceneManager.LoadScene("Dragon"); 
                 break;
         }
