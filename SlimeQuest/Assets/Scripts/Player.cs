@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+
 
 public class Player : Character
 {
      //int to look after the amount of ingredients 
     public int ingredientNum;
 
-    //text object for ingredient counter 
-    public TMP_Text ingredientCounter;
+   
     
     //inventory stuff 
     //private Inventory inventory;
@@ -29,8 +28,7 @@ public class Player : Character
     // Update is called once per frame
     void Update()
     {
-        //update ingredient text 
-        ingredientCounter.text = "Ingredients Collected: " + ingredientNum + "/3";
+
         
     }
 

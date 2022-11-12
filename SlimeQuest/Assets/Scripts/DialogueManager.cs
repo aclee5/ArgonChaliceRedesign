@@ -13,14 +13,16 @@ public class DialogueManager : MonoBehaviour
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0; 
-    public static bool isActive = false;
+    public bool isActive = false;
     private string playerStandin = "<>";
+    public bool conversationFinished; 
 
     public void OpenDialogue(Message[] messages, Actor[] actors){
         currentMessages = messages;
         currentActors = actors;
         activeMessage = 0; 
         isActive = true;
+        conversationFinished = false; 
 
         Debug.Log("Started conversation! Loaded messages" + messages.Length); 
         DisplayMessage();
@@ -36,6 +38,7 @@ public class DialogueManager : MonoBehaviour
         else{
             Debug.Log("Conversation Ended!"); 
             isActive = false; 
+            conversationFinished = true; 
         }
     } 
 
