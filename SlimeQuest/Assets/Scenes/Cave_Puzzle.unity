@@ -4428,6 +4428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneBuildIndex: 4
+  sceneState: 1
+  insideLevel: 1
 --- !u!1 &2126515259
 GameObject:
   m_ObjectHideFlags: 0
