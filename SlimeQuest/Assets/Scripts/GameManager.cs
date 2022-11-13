@@ -6,12 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int state;
-
+    public int state; 
     //Game States
-    private const int START = -4;
-    private const int FINISH = -5; 
-    private const int PLAYER_CUSTOMIZATION = -3;
+    private const int START = -3;
     private const int INTRODUCTION = -2;
     private const int DRAGON_DUNGEON = -1;
 
@@ -34,8 +31,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void UpdateState(int newState){
-        state = newState; 
+    public void Pause(){
+        Time.timeScale = 0; 
+
     }
 
     public void Restart(){
@@ -44,24 +42,35 @@ public class GameManager : MonoBehaviour
 
     public void loadScene(int scene){
         switch(scene){
+            case START:
+                state = START;
+                SceneManager.LoadScene("Title"); 
+                break;
             case INTRODUCTION:
+                state = INTRODUCTION; 
                 SceneManager.LoadScene("Introduction");
                 break;
             case MAIN_MAP:
+                state = MAIN_MAP; 
                 SceneManager.LoadScene("Main");
                 break;
-            case PLAYER_CUSTOMIZATION:
-                break; 
             case INGREDIENT_1:
+                state = INGREDIENT_1; 
+                SceneManager.LoadScene("Cave_Puzzle");
                 break;
             case INGREDIENT_2:
                 break;
             case INGREDIENT_3:
                 break;
             case DRAGON_DUNGEON:
-                SceneManager.LoadScene("Dragon");
+                state = DRAGON_DUNGEON; 
+                SceneManager.LoadScene("Dragon"); 
                 break;
         }
+        
     }
+
+    
+
 
 }

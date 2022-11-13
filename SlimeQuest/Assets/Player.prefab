@@ -83,9 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   movePoint: {fileID: 5564085812699453576}
-  whatStopsMovement:
-    serializedVersion: 2
-    m_Bits: 0
+  playerRigidbody2D: {fileID: 5564085813631190187}
   animator: {fileID: 6167661768892934518}
 --- !u!61 &5564085813631190188
 BoxCollider2D:
@@ -100,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.06027606}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.8794479}
   m_EdgeRadius: 0
 --- !u!50 &5564085813631190187
 Rigidbody2D:
@@ -146,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701cc9d5cb545024aa347673d656e406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
   ingredientNum: 0
-  ingredientCounter: {fileID: 0}
 --- !u!212 &4263107985427770770
 SpriteRenderer:
   m_ObjectHideFlags: 0
