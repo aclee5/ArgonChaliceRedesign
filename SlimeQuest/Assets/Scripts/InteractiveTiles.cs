@@ -54,39 +54,108 @@ public class InteractiveTiles : MonoBehaviour
         //here can test if the correct square is triggered and change its colour 
         //if statements to check which square they hit 
     
-
+        bool startCompare = false;
         if(collider.CompareTag("Red")){
              playerArray2.Add("3");
+             startCompare = true;
            } 
            if(collider.CompareTag("Green")){
              playerArray2.Add("4");
+             startCompare = true;
            } 
            if(collider.CompareTag("Blue")) {
              playerArray2.Add("1");
+             startCompare = true;
             
            } 
            if(collider.CompareTag("Yellow")){
              playerArray2.Add("2");
+             startCompare =true;
          
            }
-        Debug.Log("count of array: " + playerArray2.Count);
-        //if(playerArray2.Count == 4){
-            for(int i=0; i< playerArray2.Count; i++){
-              Debug.Log("i: " + playerArray2[i] + " correct i : " + correctArray[i]);
-              if(playerArray2[i] == correctArray[i] )
-              {
+        // Debug.Log("count of array: " + playerArray2.Count);
+        // //if(playerArray2.Count == 4){
+        //     for(int i=0; i< playerArray2.Count; i++){
+        //       Debug.Log("i: " + playerArray2[i] + " correct i : " + correctArray[i]);
+        //       if(playerArray2[i] == correctArray[i] )
+        //       {
                 
-                    Debug.Log("they are same");
-                }
-                else {
-                  Debug.Log(" else i: " + playerArray2[i] + " correct and i : " + correctArray[i]);
-                  Debug.Log("NOT THE SAME "); // always thinks they arent the same even when its literally the same omfg
-                }
+        //             Debug.Log("they are same");
+        //             sr2.color = colorBlack;
+        //         }
+        //         else {
+        //           Debug.Log(" else i: " + playerArray2[i] + " correct and i : " + correctArray[i]);
+        //           Debug.Log("NOT THE SAME "); // always thinks they arent the same even when its literally the same omfg
+        //         }
 
-            }
+        //     }
+        int counterTime = 0;
+       // if(startCompare == true){
+          foreach(string i in correctArray)
+        {
+          foreach(string j in playerArray2) 
+          {
+            if(i == j ) 
+            {
+              Debug.Log("wow omg " + i + j);
+              counterTime+=1;
 
-          
+              if(counterTime == 1 && i == "3")
+              {
+                sr2.color = colorBlack;
+              }
+              else if(counterTime == 2 && i == "4")
+              {
+                  sr3.color = colorBlack;
+              } 
+              else if (counterTime == 3 && i == "1"){
+                sr4.color = colorBlack;
+              } 
+              else if(counterTime == 4 && i == "2")
+              {
+                sr5.color = colorBlack;
+              }
+              else {
+                sr2.color = colorRed;
+                sr3.color = colorGreen;
+                sr4.color = colorBlue;
+                sr5.color = colorYellow;
+                //counterTime = 0;
+                //break;
+                startCompare = false;
+                
+              }
+              
+              
+            } 
+            
+          }
+        }
+        if(startCompare == false) {
+          for(int i =0; i< playerArray2.Count; i++){
+            playerArray2.RemoveAt(i);
+            counterTime = 0 ;
+          }
+        }
+        //}
         
+
+        // foreach(string i in playerArray2){
+        //   if(i == "3") {
+        //     Debug.Log("just my luck");
+        //     sr2.color = colorBlack;
+            
+        //   }if(i == "4"){
+        //       Debug.Log("yes 2");
+        //       sr3.color = colorBlack;
+        //     }
+          
+        //   else {
+        //     Debug.Log("SHIT");
+        //     //sr2.color = colorRed;
+        //       //  sr3.color = colorGreen;
+        //   }
+        // }
         //}
 
         // for(int i=0; i< playerArray2.Count; i++){
@@ -123,25 +192,9 @@ public class InteractiveTiles : MonoBehaviour
         // }
         
 
-       // Debug.Log("size" + size);
-       
-        // for(int i =0; i < playerArray2.Length; i++){
-        //     Debug.Log(playerArray.ToString());
-        // }
-        
-        //int arrSize = sizeof(playerArray)/sizeof(playerArray[0]);
-        // Debug.Log("item test" + playerArray2[0]);
-        // Debug.Log("item test2" + playerArray2[1]);
-        // Debug.Log("item test3" + playerArray2[2]);
-        // Debug.Log("item test4" + playerArray2[3]);
         
 
-        // if(collider.CompareTag("Red")) {
-        //     //red square value is 3 
-        //     playerArray[0] =3;
-        //     Debug.Log("player: " + playerArray[0]);
-        // } 
-        
+      
     }
     public void OnTriggerExit2D(Collider2D collider){
         Debug.Log("exited");
