@@ -15,8 +15,10 @@ public class DragonBehaviour : Character
     public GameObject dialogueBox; 
     public GameObject inventoryOptionButton;
     public GameObject noItemOption;
+    public GameObject endButton; 
     public int convoProgress;  
     private bool exit; 
+    private bool getEndButton; 
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class DragonBehaviour : Character
         dialogueBox.SetActive(false); 
         convoProgress = 0; 
         exit = false; 
+        getEndButton = false; 
         
     }
 
@@ -42,6 +45,7 @@ public class DragonBehaviour : Character
         }
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == -2){
             convoProgress = -3; 
+           
         }
         if(giftNum < (0.5*giftTotal)){
             convoProgress = 1; 
@@ -51,9 +55,19 @@ public class DragonBehaviour : Character
         }
         else if (giftNum > giftTotal){
             convoProgress = 4; 
+            getEndButton = true; 
         }
         else{
             convoProgress = 2; 
+        }
+
+        if(getEndButton && dialogueBox.GetComponent<DialogueManager>().conversationFinished){
+            endButton.SetActive(true); 
+        }
+
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && exit){
+            FindObjectOfType<SaveSystem>().SavePlayerDataTo(2); 
+            FindObjectOfType<GameManager>().loadScene(0);
         }
 
         

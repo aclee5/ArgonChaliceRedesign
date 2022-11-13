@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour
 
     public void loadScene(int scene){
         switch(scene){
+            case START:
+                state = START;
+                SceneManager.LoadScene("Title"); 
+                break;
             case INTRODUCTION:
                 state = INTRODUCTION; 
                 SceneManager.LoadScene("Introduction");
