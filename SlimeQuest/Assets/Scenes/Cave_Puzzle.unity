@@ -3888,6 +3888,7 @@ MonoBehaviour:
   colorBlue: {r: 0, g: 0, b: 1, a: 1}
   colorGreen: {r: 0, g: 1, b: 0, a: 1}
   colorYellow: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  tiles: []
 --- !u!50 &1432714939 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5564085813631190187, guid: e5b2bb872994fc643b9324887c32d3a3,
@@ -4356,6 +4357,15 @@ MonoBehaviour:
   colorBlue: {r: 0, g: 0, b: 1, a: 1}
   colorGreen: {r: 0, g: 1, b: 0, a: 1}
   colorYellow: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  tiles:
+  - tile: {fileID: 1024232335}
+    value: 3
+  - tile: {fileID: 283222036}
+    value: 4
+  - tile: {fileID: 126343637}
+    value: 1
+  - tile: {fileID: 1252222871}
+    value: 2
 --- !u!1 &1749357175
 GameObject:
   m_ObjectHideFlags: 0

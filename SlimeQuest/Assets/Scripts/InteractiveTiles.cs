@@ -14,14 +14,27 @@ public class InteractiveTiles : MonoBehaviour
     private int size;
 
     //public int[] correctArray = {3,4,1,2}; // fix order later
-    //public int[] playerArray; 
-    
-    ArrayList playerArray2 = new ArrayList();
-    ArrayList correctArray = new ArrayList(new string[] {"3","4","1","2"});
+    //public int[] playerArray;
+   
 
-    // Start is called before the first frame update
+    public InteractiveTile[] tiles;
+    private SpriteRenderer[] tileSprites;
+    private string playerAttempt; 
+    private string correctOrder; 
+    private bool stopColision; 
+
     void Start()
     {
+        tileSprites = new SpriteRenderer[tiles.Length];
+        playerAttempt = ""; 
+        correctOrder = ""; 
+        for (int i = 0; i < tiles.Length; i++){
+          tileSprites[i] = tiles[i].tile.GetComponent<SpriteRenderer>();
+          correctOrder += tiles[i].value; 
+        }
+        Debug.Log(correctOrder); 
+
+        stopColision = false; 
         size = 0;
         //Debug.Log("start: " +playerArray.Length);
      
@@ -36,6 +49,18 @@ public class InteractiveTiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if(correctOrder.Length != playerAttempt.Length){
+        string comparableString = "";
+        for (int i = 0; i < playerAttempt.Length - 1; i++){
+          comparableString += correctOrder[i]; 
+        }
+        if(playerAttempt != comparableString){
+          playerAttempt = ""; 
+        }
+      } else if((correctOrder.Length == playerAttempt.Length) && (playerAttempt == correctOrder)){
+        Debug.Log("Correct");
+      } 
+      
     //    foreach(int i in playerArray2){
     //          Debug.Log(i);
              
@@ -53,37 +78,43 @@ public class InteractiveTiles : MonoBehaviour
       
         //here can test if the correct square is triggered and change its colour 
         //if statements to check which square they hit 
-    
+        if(stopColision == false){
+          if(collider.CompareTag("Red")){
+          //playerArray2.Add("3");
+          playerAttempt += "3";
+          } 
+          if(collider.CompareTag("Green")){
+            //playerArray2.Add("4");
+            playerAttempt += "4";
+          } 
+          if(collider.CompareTag("Blue")) {
+            //playerArray2.Add("1");
+            playerAttempt += "1"; 
+          } 
+          if(collider.CompareTag("Yellow")){
+            //playerArray2.Add("2");
+            playerAttempt +="2";
+          }
+          Debug.Log(correctOrder + "from" + playerAttempt); 
+          stopColision = true; 
 
-        if(collider.CompareTag("Red")){
-             playerArray2.Add("3");
-           } 
-           if(collider.CompareTag("Green")){
-             playerArray2.Add("4");
-           } 
-           if(collider.CompareTag("Blue")) {
-             playerArray2.Add("1");
-            
-           } 
-           if(collider.CompareTag("Yellow")){
-             playerArray2.Add("2");
-         
-           }
-        Debug.Log("count of array: " + playerArray2.Count);
-        //if(playerArray2.Count == 4){
-            for(int i=0; i< playerArray2.Count; i++){
-              Debug.Log("i: " + playerArray2[i] + " correct i : " + correctArray[i]);
-              if(playerArray2[i] == correctArray[i] )
-              {
+        }
+        
+        // Debug.Log("count of array: " + playerArray2.Count);
+        // //if(playerArray2.Count == 4){
+        //     for(int i=0; i< playerArray2.Count; i++){
+        //       Debug.Log("i: " + playerArray2[i] + " correct i : " + correctArray[i]);
+        //       if(playerArray2[i] == correctArray[i] )
+        //       {
                 
-                    Debug.Log("they are same");
-                }
-                else {
-                  Debug.Log(" else i: " + playerArray2[i] + " correct and i : " + correctArray[i]);
-                  Debug.Log("NOT THE SAME "); // always thinks they arent the same even when its literally the same omfg
-                }
+        //             Debug.Log("they are same");
+        //         }
+        //         else {
+        //           Debug.Log(" else i: " + playerArray2[i] + " correct and i : " + correctArray[i]);
+        //           Debug.Log("NOT THE SAME "); // always thinks they arent the same even when its literally the same omfg
+        //         }
 
-            }
+        //     }
 
           
         
@@ -145,7 +176,15 @@ public class InteractiveTiles : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collider){
         Debug.Log("exited");
+        stopColision = false; 
         //sr.color = colorA;
         
     }
+}
+
+[System.Serializable]
+public class InteractiveTile{
+  public GameObject tile;  
+  public string value;
+
 }
