@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 
   ingredientNum: 0
+  dragonItemNum: 0
 --- !u!212 &4263107985427770770
 SpriteRenderer:
   m_ObjectHideFlags: 0
