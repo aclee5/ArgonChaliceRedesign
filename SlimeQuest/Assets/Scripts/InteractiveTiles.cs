@@ -100,7 +100,7 @@ public class InteractiveTiles : MonoBehaviour
               Debug.Log("wow omg " + i + j);
               counterTime+=1;
 
-              if(counterTime == 1 || counterTime == 0 && i == "3")
+              if(counterTime == 1  && i == "3")
               {
                 Debug.Log("got here " +counterTime);
                 sr2.color = colorBlack;
