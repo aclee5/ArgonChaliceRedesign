@@ -11,6 +11,7 @@ public class InteractiveTiles2 : MonoBehaviour
     public Color colorGreen = Color.green;
     public Color colorYellow = Color.yellow;
     public Color colorPurple = new Color(176.0f, 66.0f, 245.0f);
+     
     
     private int size;
 
@@ -20,6 +21,8 @@ public class InteractiveTiles2 : MonoBehaviour
     ArrayList playerArray2 = new ArrayList();
     ArrayList correctArray = new ArrayList(new string[] {"2","3","5","4","1"});
     //order - yellow, red purple green blue 
+
+    public GameObject areaBlocker; 
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,11 @@ public class InteractiveTiles2 : MonoBehaviour
     }
     void Update(){
         //dfsdfs
+          if((sr2.color == colorBlack) && (sr3.color == colorBlack) && (sr4.color == colorBlack) && (sr5.color == colorBlack) && (sr6.color == colorBlack)){
+          areaBlocker.SetActive(false); 
+
+        }
+
     }
 
 

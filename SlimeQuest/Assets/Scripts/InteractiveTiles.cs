@@ -10,6 +10,8 @@ public class InteractiveTiles : MonoBehaviour
     public Color colorBlue = Color.blue;
     public Color colorGreen = Color.green;
     public Color colorYellow = Color.yellow;
+
+    public GameObject nextSceneTrigger; 
     
     private int size;
 
@@ -44,7 +46,11 @@ public class InteractiveTiles : MonoBehaviour
     //     }
         
        // Debug.Log("stesting euqals " + playerArray2.Equals(correctArray)); // does not actaully work LOL 
-        
+
+        if((sr2.color == colorBlack) && (sr3.color == colorBlack) && (sr4.color == colorBlack) && (sr5.color == colorBlack)){
+          nextSceneTrigger.SetActive(true); 
+
+        }
         
         
     }
