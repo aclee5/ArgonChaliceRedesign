@@ -100,14 +100,9 @@ public class InteractiveTiles : MonoBehaviour
               Debug.Log("wow omg " + i + j);
               counterTime+=1;
 
-<<<<<<< Updated upstream
               if(counterTime == 1 || counterTime == 0 && i == "3")
               {
                 Debug.Log("got here " +counterTime);
-=======
-              if(counterTime == 1 && i == "3")
-              {
->>>>>>> Stashed changes
                 sr2.color = colorBlack;
               }
               else if(counterTime == 2 && i == "4")
@@ -139,11 +134,7 @@ public class InteractiveTiles : MonoBehaviour
         }
         if(startCompare == false) {
           for(int i =0; i< playerArray2.Count; i++){
-<<<<<<< Updated upstream
             playerArray2.Clear();
-=======
-            playerArray2.RemoveAt(i);
->>>>>>> Stashed changes
             counterTime = 0 ;
           }
         }
