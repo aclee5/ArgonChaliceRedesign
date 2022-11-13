@@ -7,10 +7,12 @@ public class PlayerData
 {
     public string characterName; 
     public int ingredientNum;
+    public int dragonItemNum; 
 
     public PlayerData(Player player){
         characterName = player.characterName;
-        ingredientNum = player.ingredientNum; 
+        ingredientNum = player.ingredientNum;
+        dragonItemNum = player.dragonItemNum;  
     }
 
 

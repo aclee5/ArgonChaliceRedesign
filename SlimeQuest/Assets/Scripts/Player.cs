@@ -7,6 +7,7 @@ public class Player : Character
 {
      //int to look after the amount of ingredients 
     public int ingredientNum;
+    public int dragonItemNum; 
 
    
     
@@ -18,6 +19,7 @@ public class Player : Character
     void Start()
     {
         ingredientNum = 0;
+        dragonItemNum = 0; 
           
         if (string.IsNullOrEmpty(characterName)){
             characterName = "Player"; 
@@ -29,7 +31,6 @@ public class Player : Character
     // Update is called once per frame
     void Update()
     {
-
         
     }
 
@@ -39,6 +40,9 @@ public class Player : Character
         //checks if item is a potion ingredient and adds to counter 
         if(collider.CompareTag("PotionIngredient")){
             ingredientNum +=1;
+        }
+        if(collider.CompareTag("DragonItem")){
+            dragonItemNum +=1;
         }
 
         // for(int i=0; i<inventory.slots.Length; i++){

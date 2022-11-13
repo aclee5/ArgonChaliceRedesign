@@ -10,6 +10,8 @@ TagManager:
   - Green
   - Yellow
   - Purple
+  - DragonItem
+  - DragonEntrance
   layers:
   - Default
   - TransparentFX

@@ -34,6 +34,7 @@ public class SaveSystem : MonoBehaviour
 
     }
 
+
     public void LoadPlayerData(){
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + PLAYER_SUB + SceneManager.GetActiveScene().buildIndex; 
@@ -45,6 +46,8 @@ public class SaveSystem : MonoBehaviour
             Player player = (Player)FindObjectOfType(typeof(Player));
             player.characterName = data.characterName; 
             player.ingredientNum = data.ingredientNum; 
+            player.dragonItemNum = data.dragonItemNum; 
+            Debug.Log("Loaded Data From " + SceneManager.GetActiveScene().buildIndex + "|| dragonItemsAre: " + player.dragonItemNum + "|| IngredientNum: " + player.ingredientNum); 
 
 
         }

@@ -15,7 +15,6 @@ public class PlayerNameInput : MonoBehaviour
         name = inputField.text;
         player.characterName = name;  
 
-
     }
 
 }

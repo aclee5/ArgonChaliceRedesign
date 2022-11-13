@@ -11,6 +11,7 @@ public class WizardBehavior : MonoBehaviour
         if(collision.CompareTag("Player") && FindObjectOfType<Player>().ingredientNum == 3){
             dialogueBox.SetActive(true); 
             trigger.StartDialogue(); 
+            
         }
     }
 

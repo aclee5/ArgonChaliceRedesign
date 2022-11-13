@@ -35,7 +35,10 @@ public class DragonBehaviour : Character
     void Update()
     {
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished &&(convoProgress != 4)&& (!exit)){
-            inventoryOptionButton.SetActive(true);
+            if(FindObjectOfType<Player>().dragonItemNum != 0){
+                inventoryOptionButton.SetActive(true);
+            }
+            
             noItemOption.SetActive(true); 
            
         }
@@ -85,6 +88,7 @@ public class DragonBehaviour : Character
 
     public void GiftToDragon(){
         giftNum ++; 
+        FindObjectOfType<Player>().dragonItemNum --; 
     }
 
     public void NoGiftOption(){

@@ -6,7 +6,7 @@ using TMPro;
 public class PickupInv : MonoBehaviour
 {
     private Inventory inventory;
-     public GameObject itemButton;
+    public GameObject itemButton;
  
 
     // Start is called before the first frame update

@@ -14,10 +14,10 @@ public class TextEnable : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D collider){
-        //if(collider.CompareTag("PotionIngredient")){
+        if(collider.CompareTag("PotionIngredient") || collider.CompareTag("DragonItem")){
             collectText.enabled = true;
-            Invoke("DisableText", 1.5f);
-        //}
+            Invoke("DisableText", 1.2f);
+        }
     }
 
     // Start is called before the first frame update
