@@ -9,6 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Cave_Puzzle.unity
     guid: 6adb615a97bd04b399e81cea679798c9
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Scenes/Cave2_Puzzle.unity
     guid: 2fec832d0aa3b47a5b53acba3967d915
+=======
+    path: Assets/Scenes/Cave2.1_Puzzle.unity
+    guid: ef0ce7cf0fcdc43adb3ebc72ea435e7a
+  - enabled: 1
+    path: Assets/Scenes/Dragon.unity
+    guid: 83bde012f360bec4d81421d990dc487f
+>>>>>>> Stashed changes
   m_configObjects: {}
