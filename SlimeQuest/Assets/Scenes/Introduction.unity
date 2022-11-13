@@ -1335,8 +1335,8 @@ MonoBehaviour:
     message: If there is, I need to know it now..
   - actorID: 1
     message: "<>...It is merely a legend amongst us healers\u2026 but there is a
-      potion that allegedly could cure any illness. However, if it truly is real,
-      it will not be easy to find nor to create."
+      potion called the Elixir of Life that allegedly could cure any illness. However,
+      if it truly is real, it will not be easy to find nor to create."
   - actorID: 0
     message: "A cure? Please Doctor.. I\u2019ll do anything. If you can give me any
       direction, any information to help me find this. I\u2019ll take the chance.

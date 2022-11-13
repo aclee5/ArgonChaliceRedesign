@@ -37701,8 +37701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: "So you\u2019ve collected all the items necessary to make the [Insert
-      Potion Name]"
+    message: "So you\u2019ve collected all the items necessary to make the Elixir
+      of Life. "
   - actorID: 1
     message: 'Yes I did, but who are you?   '
   - actorID: 0
