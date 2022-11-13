@@ -35979,7 +35979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneBuildIndex: 5
-  sceneState: -2
+  sceneState: -1
   insideLevel: 0
   id: DragonEntrance
 --- !u!1 &2129073256
