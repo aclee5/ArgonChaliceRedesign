@@ -10,9 +10,10 @@ public class SaveSystem : MonoBehaviour
     const string PLAYER_SUB = "/player";
     
     public void SavePlayerData(Player player){
+        string pathAddition = PLAYER_SUB + SceneManager.GetActiveScene().buildIndex; 
         
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + PLAYER_SUB + SceneManager.GetActiveScene().buildIndex; 
+        string path = System.IO.Path.Combine(Application.persistentDataPath, pathAddition); 
 
         FileStream stream = new FileStream(path, FileMode.Create); 
         PlayerData data = new PlayerData(player);
@@ -24,7 +25,8 @@ public class SaveSystem : MonoBehaviour
 
     public void SavePlayerDataTo(int index){
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + PLAYER_SUB + index; 
+        string pathAddition = PLAYER_SUB + index;
+        string path = System.IO.Path.Combine(Application.persistentDataPath, pathAddition); 
 
         FileStream stream = new FileStream(path, FileMode.Create); 
         PlayerData data = new PlayerData((Player)FindObjectOfType(typeof(Player)));
@@ -37,7 +39,9 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadPlayerData(){
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + PLAYER_SUB + SceneManager.GetActiveScene().buildIndex; 
+        string pathAddition = PLAYER_SUB + SceneManager.GetActiveScene().buildIndex; 
+        string path = System.IO.Path.Combine(Application.persistentDataPath, pathAddition); 
+
         if (File.Exists(path)){
             FileStream stream = new FileStream(path, FileMode.Open);
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
