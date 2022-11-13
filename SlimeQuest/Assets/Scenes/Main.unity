@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 105876078}
   - component: {fileID: 105876080}
   - component: {fileID: 105876081}
+  - component: {fileID: 105876082}
   m_Layer: 0
   m_Name: CaveEntranceTrigger
   m_TagString: Untagged
@@ -310,6 +311,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &105876082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105876076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ec2d77db4988a4eaaf93d77ffd8995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneBuildIndex: 3
+  sceneState: 1
+  insideLevel: 0
+  id: 
 --- !u!4 &137354889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5564085813631190185, guid: e5b2bb872994fc643b9324887c32d3a3,
@@ -35900,6 +35917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2092203519}
   - component: {fileID: 2092203521}
+  - component: {fileID: 2092203522}
   m_Layer: 0
   m_Name: DungeonEntranceTrigger
   m_TagString: Untagged
@@ -35948,6 +35966,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2092203522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092203517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ec2d77db4988a4eaaf93d77ffd8995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneBuildIndex: 5
+  sceneState: -2
+  insideLevel: 0
+  id: DragonEntrance
 --- !u!1 &2129073256
 GameObject:
   m_ObjectHideFlags: 0
