@@ -10,7 +10,7 @@ public class InteractiveTiles2 : MonoBehaviour
     public Color colorBlue = Color.blue;
     public Color colorGreen = Color.green;
     public Color colorYellow = Color.yellow;
-    public Color colorPurple = new Color(176, 66, 245);
+    public Color colorPurple = new Color(176.0f, 66.0f, 245.0f);
     
     private int size;
 
