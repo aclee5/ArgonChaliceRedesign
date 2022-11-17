@@ -4,17 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameHandler : MonoBehaviour
-{
-    private static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+{ 
+   
     // Start is called before the first frame update
     void Awake(){
-        if(!Directory.Exists(SAVE_FOLDER)){
-            Directory.CreateDirectory(SAVE_FOLDER);
-        }
+        SaveSystem.Init();
+        
     }
     void Start()
     {
-        
+        LoadPlayerData(); 
         
     }
 
@@ -28,9 +27,27 @@ public class GameHandler : MonoBehaviour
         GameObject player = GameObject.Find("Player"); 
         PlayerData playerData = new PlayerData(player.GetComponent<Player>()); 
         string json = JsonUtility.ToJson(playerData);
-        File.WriteAllText(Application.dataPath + "/save.txt", json);
+        SaveSystem.Save(json); 
+
         Debug.Log("Saved Data");
 
 
+    }
+
+    public void LoadPlayerData(){
+        string saveString = SaveSystem.Load();
+        if(saveString != null){
+            PlayerData playerData = JsonUtility.FromJson<PlayerData>(saveString); 
+            Player player = (Player)FindObjectOfType(typeof(Player));
+            player.characterName = playerData.characterName; 
+            player.ingredientNum = playerData.ingredientNum; 
+            player.dragonItemNum = playerData.dragonItemNum; 
+
+            Debug.Log("Loaded: " + saveString);
+
+        }
+        else{
+            Debug.Log("No Save"); 
+        }
     }
 }

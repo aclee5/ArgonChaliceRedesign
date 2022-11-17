@@ -20,8 +20,6 @@ public class SceneTrigger : MonoBehaviour
                 if (id == "DragonEntrance" && FindObjectOfType<Player>().ingredientNum != 3){
                     return; 
                 }
-                FindObjectOfType<SaveSystem>().SavePlayerDataTo(nextSceneBuildIndex); 
-                Debug.Log("savedFile@: " + nextSceneBuildIndex); 
                 FindObjectOfType<GameManager>().loadScene(sceneState); 
             }
           

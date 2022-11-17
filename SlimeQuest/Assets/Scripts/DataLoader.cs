@@ -5,6 +5,7 @@ using UnityEngine;
 public class DataLoader : MonoBehaviour
 {
    void Start(){
-        FindObjectOfType<SaveSystem>().LoadPlayerData(); 
+      
    }
+
 }

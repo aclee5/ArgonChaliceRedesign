@@ -69,7 +69,6 @@ public class DragonBehaviour : Character
         }
 
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && exit){
-            FindObjectOfType<SaveSystem>().SavePlayerDataTo(2); 
             FindObjectOfType<GameManager>().loadScene(0);
         }
 
