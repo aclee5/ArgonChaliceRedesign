@@ -2,10 +2,10 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 { 
+   
     // Start is called before the first frame update
     void Awake(){
         SaveSystem.Init();
@@ -28,8 +28,7 @@ public class GameHandler : MonoBehaviour
         PlayerData playerData = new PlayerData(); 
             playerData.characterName = player.characterName;
             playerData.ingredientNum = player.ingredientNum; 
-            playerData.dragonItemNum = player.dragonItemNum;
-            playerData.respawnPoints = player.respawnPoints; 
+            playerData.dragonItemNum = player.dragonItemNum; 
 
         string json = JsonUtility.ToJson(playerData);
         SaveSystem.Save(json); 
@@ -48,8 +47,6 @@ public class GameHandler : MonoBehaviour
             player.SetName(playerData.characterName);
             player.SetIngredientNumber(playerData.ingredientNum); 
             player.SetDragonNumber(playerData.dragonItemNum);
-            player.respawnPoints = playerData.respawnPoints; 
-            
             
             Debug.Log("Loaded: " + saveString);
 
