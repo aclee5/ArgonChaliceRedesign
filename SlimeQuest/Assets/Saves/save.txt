@@ -1,1 +1,1 @@
-{"characterName":"Player","ingredientNum":1,"dragonItemNum":1}
+{"characterName":"dingus","ingredientNum":0,"dragonItemNum":0}
