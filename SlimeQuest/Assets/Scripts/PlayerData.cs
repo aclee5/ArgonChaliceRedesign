@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerData
 {
     public string characterName; 
-    public Vector3[] respawnPoints; 
+    public List<Vector3> respawnPoints; 
     public int ingredientNum;
     public int dragonItemNum; 
 

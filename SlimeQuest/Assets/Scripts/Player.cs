@@ -9,7 +9,7 @@ public class Player : Character
      //int to look after the amount of ingredients 
     public int ingredientNum;
     public int dragonItemNum; 
-    public Vector3[] respawnPoints; 
+    public List<Vector3> respawnPoints = new List<Vector3>(); 
    
     
     //inventory stuff 
@@ -17,15 +17,24 @@ public class Player : Character
    // public GameObject itemButton;
 
     // Start is called before the first frame update
+    void Awake(){
+        ingredientNum = 0;
+        dragonItemNum = 0;
+        FindObjectOfType<GameHandler>().LoadPlayerData();  
+
+    }
     void Start()
     {
-        respawnPoints = new Vector3[SceneManager.sceneCountInBuildSettings]; 
-        ingredientNum = 0;
-        dragonItemNum = 0; 
+        DontDestroyOnLoad(gameObject); 
+              
           
         if (string.IsNullOrEmpty(characterName)){
             characterName = "Player"; 
         }
+
+        
+
+       
         //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         
     }
