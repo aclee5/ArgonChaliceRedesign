@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0; 
 
     }
+    public void Play(){
+        Time.timeScale = 1;
+    }
 
     public void Restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
