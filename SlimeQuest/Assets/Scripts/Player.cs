@@ -8,7 +8,6 @@ public class Player : Character
      //int to look after the amount of ingredients 
     public int ingredientNum;
     public int dragonItemNum; 
-
    
     
     //inventory stuff 
@@ -57,6 +56,18 @@ public class Player : Character
 
         
         //Destroy(collider.gameObject);
+    }
+
+    public void SetName(string newName){
+        characterName = newName; 
+    }
+
+    public void SetIngredientNumber(int num){
+        ingredientNum = num; 
+    }
+
+    public void SetDragonNumber(int num){
+        dragonItemNum = num; 
     }
 }
  

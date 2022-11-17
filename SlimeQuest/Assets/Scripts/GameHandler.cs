@@ -24,8 +24,12 @@ public class GameHandler : MonoBehaviour
     }
 
     public void SavePlayerData(){
-        GameObject player = GameObject.Find("Player"); 
-        PlayerData playerData = new PlayerData(player.GetComponent<Player>()); 
+        Player player = (Player)FindObjectOfType(typeof(Player));
+        PlayerData playerData = new PlayerData(); 
+            playerData.characterName = player.characterName;
+            playerData.ingredientNum = player.ingredientNum; 
+            playerData.dragonItemNum = player.dragonItemNum; 
+
         string json = JsonUtility.ToJson(playerData);
         SaveSystem.Save(json); 
 
@@ -39,10 +43,11 @@ public class GameHandler : MonoBehaviour
         if(saveString != null){
             PlayerData playerData = JsonUtility.FromJson<PlayerData>(saveString); 
             Player player = (Player)FindObjectOfType(typeof(Player));
-            player.characterName = playerData.characterName; 
-            player.ingredientNum = playerData.ingredientNum; 
-            player.dragonItemNum = playerData.dragonItemNum; 
-
+            
+            player.SetName(playerData.characterName);
+            player.SetIngredientNumber(playerData.ingredientNum); 
+            player.SetDragonNumber(playerData.dragonItemNum);
+            
             Debug.Log("Loaded: " + saveString);
 
         }

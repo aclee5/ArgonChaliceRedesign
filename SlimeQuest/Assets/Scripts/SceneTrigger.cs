@@ -13,6 +13,7 @@ public class SceneTrigger : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
+            FindObjectOfType<GameHandler>().SavePlayerData(); 
             if(insideLevel){
                 SceneManager.LoadScene(nextSceneBuildIndex, LoadSceneMode.Single);
             }
@@ -20,6 +21,7 @@ public class SceneTrigger : MonoBehaviour
                 if (id == "DragonEntrance" && FindObjectOfType<Player>().ingredientNum != 3){
                     return; 
                 }
+                
                 FindObjectOfType<GameManager>().loadScene(sceneState); 
             }
           

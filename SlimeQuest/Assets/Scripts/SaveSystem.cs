@@ -20,7 +20,7 @@ public static class SaveSystem
 
     }
     public static string Load(){
-        if(File.Exists(Application.dataPath +"/save.txt")){
+        if(File.Exists(SAVE_FOLDER +"/save.txt")){
             string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
             return saveString;
         }
