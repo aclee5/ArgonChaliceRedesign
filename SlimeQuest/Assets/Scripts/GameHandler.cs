@@ -2,6 +2,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 { 
@@ -28,7 +29,8 @@ public class GameHandler : MonoBehaviour
         PlayerData playerData = new PlayerData(); 
             playerData.characterName = player.characterName;
             playerData.ingredientNum = player.ingredientNum; 
-            playerData.dragonItemNum = player.dragonItemNum; 
+            playerData.dragonItemNum = player.dragonItemNum;
+            playerData.respawnPoints = player.respawnPoints; 
 
         string json = JsonUtility.ToJson(playerData);
         SaveSystem.Save(json); 
@@ -47,6 +49,7 @@ public class GameHandler : MonoBehaviour
             player.SetName(playerData.characterName);
             player.SetIngredientNumber(playerData.ingredientNum); 
             player.SetDragonNumber(playerData.dragonItemNum);
+            player.respawnPoints = playerData.respawnPoints; 
             
             Debug.Log("Loaded: " + saveString);
 

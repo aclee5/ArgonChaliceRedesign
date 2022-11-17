@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Player : Character
@@ -8,6 +9,7 @@ public class Player : Character
      //int to look after the amount of ingredients 
     public int ingredientNum;
     public int dragonItemNum; 
+    public Vector3[] respawnPoints; 
    
     
     //inventory stuff 
@@ -17,6 +19,7 @@ public class Player : Character
     // Start is called before the first frame update
     void Start()
     {
+        respawnPoints = new Vector3[SceneManager.sceneCountInBuildSettings]; 
         ingredientNum = 0;
         dragonItemNum = 0; 
           
@@ -68,6 +71,10 @@ public class Player : Character
 
     public void SetDragonNumber(int num){
         dragonItemNum = num; 
+    }
+
+    public void PlaceCheckPoint(int sceneIndex, Vector3 t){
+        respawnPoints[sceneIndex] = t; 
     }
 }
  
