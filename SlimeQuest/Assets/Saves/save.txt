@@ -1,1 +1,1 @@
-{"characterName":"Allen","respawnPoints":[{"x":0.0,"y":0.0,"z":0.0},{"x":0.0,"y":0.33000001311302187,"z":0.0},{"x":-40.47999954223633,"y":-2.9800000190734865,"z":0.0}],"ingredientNum":0,"dragonItemNum":1}
+{"characterName":"Allen","respawnPoints":[{"x":0.0,"y":0.0,"z":0.0},{"x":0.0,"y":0.33000001311302187,"z":0.0},{"x":-21.540000915527345,"y":-4.0,"z":-0.023990828543901445}],"ingredientNum":0,"dragonItemNum":4}

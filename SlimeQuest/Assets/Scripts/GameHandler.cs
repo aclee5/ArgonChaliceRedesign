@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 { 
-   
     // Start is called before the first frame update
     void Awake(){
         SaveSystem.Init();
@@ -50,6 +49,7 @@ public class GameHandler : MonoBehaviour
             player.SetIngredientNumber(playerData.ingredientNum); 
             player.SetDragonNumber(playerData.dragonItemNum);
             player.respawnPoints = playerData.respawnPoints; 
+            
             
             Debug.Log("Loaded: " + saveString);
 

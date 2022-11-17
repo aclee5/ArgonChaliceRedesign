@@ -25,12 +25,14 @@ public class Player : Character
     }
     void Start()
     {
-        DontDestroyOnLoad(gameObject); 
-              
+        if(respawnPoints.Capacity-1 >= SceneManager.GetActiveScene().buildIndex){
+            transform.position = respawnPoints[SceneManager.GetActiveScene().buildIndex]; 
+        }             
           
         if (string.IsNullOrEmpty(characterName)){
             characterName = "Player"; 
         }
+        Debug.Log("Position is:" + transform.position); 
 
         
 
