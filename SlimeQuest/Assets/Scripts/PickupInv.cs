@@ -7,13 +7,12 @@ public class PickupInv : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
+    public string itemID; 
  
 
     // Start is called before the first frame update
     void Start()
     {   
-        
-       
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
