@@ -58,4 +58,9 @@ public class GameHandler : MonoBehaviour
             Debug.Log("No Save"); 
         }
     }
+
+    public void ResetPlayerData(){
+       SaveSystem.Delete(); 
+       UnityEditor.AssetDatabase.Refresh(); 
+    }
 }

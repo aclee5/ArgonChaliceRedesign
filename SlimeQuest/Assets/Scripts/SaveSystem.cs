@@ -28,5 +28,11 @@ public static class SaveSystem
             return null; 
         }
     }
+
+    public static void Delete(){
+        if(File.Exists(SAVE_FOLDER +"/save.txt")){
+           File.Delete(SAVE_FOLDER +"/save.txt");
+        }
+    }
    
 }
