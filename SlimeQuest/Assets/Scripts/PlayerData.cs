@@ -9,11 +9,11 @@ public class PlayerData
     public int ingredientNum;
     public int dragonItemNum; 
 
-    public PlayerData(Player player){
-        characterName = player.characterName;
-        ingredientNum = player.ingredientNum;
-        dragonItemNum = player.dragonItemNum;  
-    }
+    // public PlayerData(Player player){
+    //     characterName = player.characterName;
+    //     ingredientNum = player.ingredientNum;
+    //     dragonItemNum = player.dragonItemNum;  
+    // }
 
 
 }

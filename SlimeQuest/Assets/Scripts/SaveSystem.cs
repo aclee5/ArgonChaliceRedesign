@@ -5,61 +5,28 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary; 
 using UnityEngine.SceneManagement; 
 
-public class SaveSystem : MonoBehaviour
+public static class SaveSystem
 {
-    const string PLAYER_SUB = "/player";
-    
-    public void SavePlayerData(Player player){
-        string pathAddition = PLAYER_SUB + SceneManager.GetActiveScene().buildIndex; 
-        
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = System.IO.Path.Combine(Application.persistentDataPath, pathAddition); 
+    private static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
 
-        FileStream stream = new FileStream(path, FileMode.Create); 
-        PlayerData data = new PlayerData(player);
-
-        formatter.Serialize(stream, data);
-        stream.Close(); 
+    public static void Init(){
+        if(!Directory.Exists(SAVE_FOLDER)){
+            Directory.CreateDirectory(SAVE_FOLDER);
+        }
 
     }
-
-    public void SavePlayerDataTo(int index){
-        BinaryFormatter formatter = new BinaryFormatter();
-        string pathAddition = PLAYER_SUB + index;
-        string path = System.IO.Path.Combine(Application.persistentDataPath, pathAddition); 
-
-        FileStream stream = new FileStream(path, FileMode.Create); 
-        PlayerData data = new PlayerData((Player)FindObjectOfType(typeof(Player)));
-
-        formatter.Serialize(stream, data);
-        stream.Close(); 
+    public static void Save(string saveString){
+        File.WriteAllText(SAVE_FOLDER + "/save.txt", saveString);
 
     }
-
-
-    public void LoadPlayerData(){
-        BinaryFormatter formatter = new BinaryFormatter();
-        string pathAddition = PLAYER_SUB + SceneManager.GetActiveScene().buildIndex; 
-        string path = System.IO.Path.Combine(Application.persistentDataPath, pathAddition); 
-
-        if (File.Exists(path)){
-            FileStream stream = new FileStream(path, FileMode.Open);
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
-            stream.Close();  
-
-            Player player = (Player)FindObjectOfType(typeof(Player));
-            player.characterName = data.characterName; 
-            player.ingredientNum = data.ingredientNum; 
-            player.dragonItemNum = data.dragonItemNum; 
-            Debug.Log("Loaded Data From " + SceneManager.GetActiveScene().buildIndex + "|| dragonItemsAre: " + player.dragonItemNum + "|| IngredientNum: " + player.ingredientNum); 
-
-
+    public static string Load(){
+        if(File.Exists(SAVE_FOLDER +"/save.txt")){
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
+            return saveString;
         }
         else{
-            Debug.LogError("Path not found in " + path);
+            return null; 
         }
-
-
     }
-
+   
 }
