@@ -25,11 +25,14 @@ public class GameHandler : MonoBehaviour
 
     public void SavePlayerData(){
         Player player = (Player)FindObjectOfType(typeof(Player));
+        Inventory inventory = (Inventory)FindObjectOfType(typeof(Inventory)); 
+
         PlayerData playerData = new PlayerData(); 
             playerData.characterName = player.characterName;
             playerData.ingredientNum = player.ingredientNum; 
             playerData.dragonItemNum = player.dragonItemNum;
             playerData.respawnPoints = player.respawnPoints; 
+            playerData.itemIDs = inventory.itemIDs; 
 
         string json = JsonUtility.ToJson(playerData);
         SaveSystem.Save(json); 
@@ -44,11 +47,14 @@ public class GameHandler : MonoBehaviour
         if(saveString != null){
             PlayerData playerData = JsonUtility.FromJson<PlayerData>(saveString); 
             Player player = (Player)FindObjectOfType(typeof(Player));
+            Inventory inventory = (Inventory)FindObjectOfType(typeof(Inventory)); 
             
             player.SetName(playerData.characterName);
             player.SetIngredientNumber(playerData.ingredientNum); 
             player.SetDragonNumber(playerData.dragonItemNum);
             player.respawnPoints = playerData.respawnPoints; 
+            inventory.itemIDs = playerData.itemIDs; 
+
             
             
             Debug.Log("Loaded: " + saveString);

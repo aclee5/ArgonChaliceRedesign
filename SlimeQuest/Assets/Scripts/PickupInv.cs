@@ -7,7 +7,7 @@ public class PickupInv : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
-    public string itemID; 
+    public int itemID; 
  
 
     // Start is called before the first frame update
@@ -31,6 +31,7 @@ public class PickupInv : MonoBehaviour
                 if(inventory.isFull[i] == false){
                     //item can be added to inventory
                     inventory.isFull[i] = true;
+                    inventory.itemIDs.Add(itemID); 
                     Instantiate(itemButton, inventory.slots[i].transform, false);
                     Destroy(gameObject);
                     break;

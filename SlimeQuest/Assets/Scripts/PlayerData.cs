@@ -9,5 +9,6 @@ public class PlayerData
     public List<Vector3> respawnPoints; 
     public int ingredientNum;
     public int dragonItemNum; 
+    public List<int> itemIDs; 
 
 }
