@@ -46,6 +46,8 @@ GameObject:
   - component: {fileID: 5564085813631190189}
   - component: {fileID: 4263107985427770770}
   - component: {fileID: 6167661768892934518}
+  - component: {fileID: 2903542260247863446}
+  - component: {fileID: 632386075824552586}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -147,6 +149,7 @@ MonoBehaviour:
   characterName: 
   ingredientNum: 0
   dragonItemNum: 0
+  respawnPoints: []
 --- !u!212 &4263107985427770770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -219,3 +222,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2903542260247863446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564085813631190184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5909c17587cd524cae6184716ceb4d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 0000000000000000
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  items:
+  - {fileID: 980889048467797038, guid: 8325278500daae0478d6313e54445b60, type: 3}
+  - {fileID: 8646410602492807214, guid: f39b9ae7463d37a47b9a0b64b1ebde91, type: 3}
+  - {fileID: 2483511976383304899, guid: f6076127f58efd949ad8d5aa5a9f677c, type: 3}
+  - {fileID: 2884395533008931542, guid: e919ebd4710fe524b970fcd77ba97af2, type: 3}
+--- !u!114 &632386075824552586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564085813631190184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f22cbfe54e951145a8ca14ea5844258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectText: {fileID: 0}
