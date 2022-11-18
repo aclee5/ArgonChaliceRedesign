@@ -25,18 +25,22 @@ public class PickupInv : MonoBehaviour
         if(collider.CompareTag("Player")){
             //enable text 
             
-           
-
+          
             for(int i=0; i<inventory.slots.Length; i++){
-                if(inventory.isFull[i] == false){
-                    //item can be added to inventory
-                    inventory.isFull[i] = true;
-                    inventory.itemIDs.Add(itemID); 
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
-                    Destroy(gameObject);
-                    break;
+                if(i < inventory.slots.Length){
+                    if(inventory.isFull[i] == false){
+                        //item can be added to inventory
+                        inventory.isFull[i] = true;
+                        inventory.itemIDs.Add(itemID); 
+                        Instantiate(itemButton, inventory.slots[i].transform, false);
+                        Destroy(gameObject);
+                        break;
+                    }
+
                 }
+                
             }
+      
        
         }
         

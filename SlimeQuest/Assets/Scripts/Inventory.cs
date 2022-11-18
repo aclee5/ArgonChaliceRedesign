@@ -20,11 +20,13 @@ public class Inventory : MonoBehaviour
     {
       
             for(int i=0; i < itemIDs.Capacity; i++){
-                
-                int id = itemIDs[i];
-                PickupInv item = items[id].GetComponent<PickupInv>(); 
-                Instantiate(item.itemButton, slots[i].transform, false); 
-                Debug.Log("instantiated item " + items[id]+  " at slot" + slots[i]);
+                if(i < slots.Length){
+                    int id = itemIDs[i];
+                    PickupInv item = items[id].GetComponent<PickupInv>(); 
+                    Instantiate(item.itemButton, slots[i].transform, false); 
+                    Debug.Log("instantiated item " + items[id]+  " at slot" + slots[i]);
+
+                }               
 
             }
 
