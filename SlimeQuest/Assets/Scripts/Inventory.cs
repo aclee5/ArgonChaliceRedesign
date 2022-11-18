@@ -13,10 +13,22 @@ public class Inventory : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake(){
+       
         
     }
     void Start()
     {
+      
+            for(int i=0; i < itemIDs.Capacity; i++){
+                
+                int id = itemIDs[i];
+                PickupInv item = items[id].GetComponent<PickupInv>(); 
+                Instantiate(item.itemButton, slots[i].transform, false); 
+                Debug.Log("instantiated item " + items[id]+  " at slot" + slots[i]);
+
+            }
+
+        
            
 
     }
