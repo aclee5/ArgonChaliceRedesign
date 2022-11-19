@@ -17830,6 +17830,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7683077161790550687, guid: 418964af7eff1294bbf8ed032949966a,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1274944222, guid: a99e1d1cade2b254c9e5ba5693ac5bd9,
+        type: 3}
+    - target: {fileID: -7683077161790550687, guid: 418964af7eff1294bbf8ed032949966a,
+        type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
