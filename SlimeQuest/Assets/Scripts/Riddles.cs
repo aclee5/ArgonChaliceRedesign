@@ -61,7 +61,7 @@ public class Riddles : MonoBehaviour
         //     convoProgress = 2;
         // }
 
-        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished){
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 0){
             Debug.Log("testing 1");
             answerOneButton.SetActive(true);
             answerTwoButton.SetActive(true);
@@ -81,13 +81,21 @@ public class Riddles : MonoBehaviour
             answerOneButton2.SetActive(true);
             answerTwoButton2.SetActive(true);
             answerThreeButton2.SetActive(true);
-        } 
-        // if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 2){
-        //     Debug.Log("testing 3");
-        //     answerOneButton3.SetActive(true);
-        //     answerTwoButton3.SetActive(true);
-        //     answerThreeButton3.SetActive(true);
-        // } 
+        } else {
+           answerOneButton2.SetActive(false);
+            answerTwoButton2.SetActive(false);
+            answerThreeButton2.SetActive(false); 
+        }
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 2){
+            Debug.Log("testing 3");
+            answerOneButton3.SetActive(true);
+            answerTwoButton3.SetActive(true);
+            answerThreeButton3.SetActive(true);
+        } else {
+            answerOneButton3.SetActive(false);
+            answerTwoButton3.SetActive(false);
+            answerThreeButton3.SetActive(false);
+        }
 
         Debug.Log("convo " + convoProgress);
     }
