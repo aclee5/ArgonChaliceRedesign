@@ -12,6 +12,9 @@ TagManager:
   - Purple
   - DragonItem
   - DragonEntrance
+  - MazeB1
+  - MazeB2
+  - MazeB3
   layers:
   - Default
   - TransparentFX
