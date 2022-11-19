@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Riddles : MonoBehaviour
 
@@ -10,14 +11,23 @@ public class Riddles : MonoBehaviour
 
     public GameObject dialogueBox; 
     public GameObject answerOneButton;
+    public GameObject answerTwoButton;
+    public GameObject answerThreeButton;
     public bool correctRiddle; // to check if they correctly did riddle 
     public int convoProgress;
+
+    //texts for the buttton blobbs
+    public TMP_Text answerOne;
+    public TMP_Text answerTwo;
+    public TMP_Text answerThree;
    
     void Start(){
         //Debug.Log("hi");
        correctRiddle = false;
        convoProgress = 0;
        answerOneButton.SetActive(false);
+       answerThreeButton.SetActive(false);
+       answerTwoButton.SetActive(false);
     }
 
     void Update(){
@@ -25,15 +35,20 @@ public class Riddles : MonoBehaviour
             Debug.Log("answer correct");
             convoProgress =1;
             
-        }
+        } 
 
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished ){
            
-                answerOneButton.SetActive(true);
+            answerOneButton.SetActive(true);
+            answerTwoButton.SetActive(true);
+            answerThreeButton.SetActive(true);
+
             
            
         } else {
             answerOneButton.SetActive(false);
+            answerTwoButton.SetActive(false);
+            answerThreeButton.SetActive(false);
         }
     }
 
