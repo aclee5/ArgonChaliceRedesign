@@ -10,6 +10,7 @@ public class MazeLogic : MonoBehaviour
     public bool b1Active, b2Active, b3Active;
 
     public GameObject IngredientOne; 
+    public GameObject gate; 
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,8 @@ public class MazeLogic : MonoBehaviour
     {
         if(b1Active && b2Active && b3Active){
             ///win condition all buttons pressed can spawn item and then leave
-            Instantiate(IngredientOne, new Vector3(50, -5, 0), Quaternion.identity);
+            Instantiate(IngredientOne, new Vector3(-25, 1, 0), Quaternion.identity); //fix location 
+            Destroy(gate); //remove the gate 
         }
     }
 
