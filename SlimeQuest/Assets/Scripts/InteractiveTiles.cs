@@ -14,43 +14,36 @@ public class InteractiveTiles : MonoBehaviour
     public GameObject nextSceneTrigger; 
     
 
-    //public int[] correctArray = {3,4,1,2}; // fix order later
-    //public int[] playerArray; 
+    
     
     ArrayList playerArray2 = new ArrayList();
-    ArrayList correctArray = new ArrayList(new string[] {"3","4","1","2"});
+    ArrayList correctArray = new ArrayList(new string[] {"1","2","3","4"});
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("start: " +playerArray.Length);
-     
+        
+
         sr2 = GameObject.Find("RedSquare").GetComponent<SpriteRenderer>();
         sr3 = GameObject.Find("GreenSquare").GetComponent<SpriteRenderer>();
         sr4 = GameObject.Find("BlueSquare").GetComponent<SpriteRenderer>();
         sr5 = GameObject.Find("YellowSquare").GetComponent<SpriteRenderer>();
-        //playerArray = new int[4]; 
+      
         
     }
 
     // Update is called once per frame
     void Update()
     {
-    //    foreach(int i in playerArray2){
-    //          Debug.Log(i);
-             
-    //         //size++;
-        
-    //     }
-        
-       // Debug.Log("stesting euqals " + playerArray2.Equals(correctArray)); // does not actaully work LOL 
+    
 
         if((sr2.color == colorBlack) && (sr3.color == colorBlack) && (sr4.color == colorBlack) && (sr5.color == colorBlack)){
           nextSceneTrigger.SetActive(true); 
 
         }
         
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D collider){
@@ -77,22 +70,7 @@ public class InteractiveTiles : MonoBehaviour
              startCompare =true;
          
            }
-        // Debug.Log("count of array: " + playerArray2.Count);
-        // //if(playerArray2.Count == 4){
-        //     for(int i=0; i< playerArray2.Count; i++){
-        //       Debug.Log("i: " + playerArray2[i] + " correct i : " + correctArray[i]);
-        //       if(playerArray2[i] == correctArray[i] )
-        //       {
-                
-        //             Debug.Log("they are same");
-        //             sr2.color = colorBlack;
-        //         }
-        //         else {
-        //           Debug.Log(" else i: " + playerArray2[i] + " correct and i : " + correctArray[i]);
-        //           Debug.Log("NOT THE SAME "); // always thinks they arent the same even when its literally the same omfg
-        //         }
-
-        //     }
+     
         int counterTime = 0;
        // if(startCompare == true){
           foreach(string i in correctArray)
@@ -104,21 +82,21 @@ public class InteractiveTiles : MonoBehaviour
               Debug.Log("wow omg " + i + j);
               counterTime+=1;
 
-              if(counterTime == 1  && i == "3")
+              if(counterTime == 1  && i == "1")
               {
                 Debug.Log("got here " +counterTime);
-                sr2.color = colorBlack;
-              }
-              else if(counterTime == 2 && i == "4")
-              {
-                  sr3.color = colorBlack;
-              } 
-              else if (counterTime == 3 && i == "1"){
                 sr4.color = colorBlack;
-              } 
-              else if(counterTime == 4 && i == "2")
+              }
+              else if(counterTime == 2 && i == "2")
               {
-                sr5.color = colorBlack;
+                  sr5.color = colorBlack;
+              } 
+              else if (counterTime == 3 && i == "3"){
+                sr2.color = colorBlack;
+              } 
+              else if(counterTime == 4 && i == "4")
+              {
+                sr3.color = colorBlack;
               }
               else {
                 sr2.color = colorRed;
