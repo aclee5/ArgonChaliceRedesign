@@ -8,9 +8,9 @@ public class Riddles : MonoBehaviour
 
 {
     public DialogueTrigger trigger;
-
     public DialogueTrigger riddle2Trigger;
     public DialogueTrigger riddle3Trigger;
+
     public GameObject dialogueBox; 
     public GameObject answerOneButton;
     public GameObject answerTwoButton;
@@ -100,10 +100,10 @@ public class Riddles : MonoBehaviour
         Debug.Log("convo " + convoProgress);
     }
 
-    public GameObject dialogueBox; 
-    // Start is called before the first frame update
-    void Start(){
-            dialogueBox.SetActive(true); 
+    void OnTriggerEnter2D(Collider2D collision){
+        if(collision.CompareTag("Player")){
+            dialogueBox.SetActive(true);
+            //answerOneButton.SetActive(true);  
             trigger.StartDialogue(); 
             
         }
@@ -156,4 +156,4 @@ public class Riddles : MonoBehaviour
                 break;
         }
 }
-
+}
