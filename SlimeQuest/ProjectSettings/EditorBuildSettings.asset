@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Riddle_Puzzle.unity
     guid: bca86373fe5cf4a49a704abdb02aa37b
+  - enabled: 1
+    path: Assets/Scenes/End room.unity
+    guid: ced89926c3be91b44809f64f8e3e7fd4
   m_configObjects: {}

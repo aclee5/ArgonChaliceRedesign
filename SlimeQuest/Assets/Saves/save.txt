@@ -1,1 +1,1 @@
-{"characterName":"Player","respawnPoints":[{"x":-40.47999954223633,"y":-2.9800000190734865,"z":0.0},{"x":-4.440000057220459,"y":1.4500000476837159,"z":-0.023990828543901445},{"x":-40.47999954223633,"y":-2.9800000190734865,"z":0.0}],"ingredientNum":0,"dragonItemNum":0,"itemIDs":[]}
+{"characterName":"Player","respawnPoints":[],"ingredientNum":0,"dragonItemNum":0,"itemIDs":[]}
