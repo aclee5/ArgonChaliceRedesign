@@ -6,14 +6,14 @@ using TMPro;
 
 public class PlayerNameInput : MonoBehaviour
 {
-    public string name;
+    public string charName;
     public TMP_InputField inputField; 
     public Player player;  
 
     public void StoreName(){
         
         name = inputField.text;
-        player.characterName = name;  
+        player.characterName = charName;  
 
     }
 
