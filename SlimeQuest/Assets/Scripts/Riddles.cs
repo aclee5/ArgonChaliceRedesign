@@ -126,7 +126,7 @@ public class Riddles : MonoBehaviour
             Debug.Log("done dialogue");
             //destory npc 
             Destroy(gate);
-            //Destroy(npc);
+            Destroy(npc);
             
             
         }
