@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -3631663806204998031}
   - component: {fileID: 1167254374438597895}
   - component: {fileID: -7151328049837966257}
+  - component: {fileID: -5707488392871512329}
   m_Layer: 0
   m_Name: IngredientFour
   m_TagString: Untagged
@@ -127,3 +128,23 @@ MonoBehaviour:
   itemButton: {fileID: 2664239335109783976, guid: 340f4f5ab4dfd054d8c909e2ed17b0d5,
     type: 3}
   itemID: 5
+--- !u!95 &-5707488392871512329
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2787786429110503860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
