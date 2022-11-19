@@ -57,13 +57,10 @@ public class EnemyBehaviour : MonoBehaviour
 
     }
 
-    private void ChooseMoveDirection(){
-        currentMoveDirection = Mathf.FloorToInt(Random.Range(0, moveDirections.Length));
-
-    }
 
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.CompareTag("Player")){
+            FindObjectOfType<GameManager>().Restart(); 
         }
     }
 }
