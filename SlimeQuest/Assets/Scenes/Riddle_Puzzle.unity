@@ -17842,7 +17842,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1274944222, guid: a99e1d1cade2b254c9e5ba5693ac5bd9,
+      objectReference: {fileID: -572599358, guid: f3a0b516a01d3ad439d51843d4fc7e0c,
         type: 3}
     - target: {fileID: -7683077161790550687, guid: 418964af7eff1294bbf8ed032949966a,
         type: 3}
@@ -18060,7 +18060,7 @@ Animator:
   m_GameObject: {fileID: 981082180}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f1a2d0ad609b2094fa68927abb2c7d50, type: 2}
+  m_Controller: {fileID: 9100000, guid: 67a90132bb23d9a4ea73101174234572, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -19315,7 +19315,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1850620320
 MonoBehaviour:
