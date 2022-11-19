@@ -13,7 +13,7 @@ public class InteractiveTiles2 : MonoBehaviour
     public Color colorPurple = new Color(176.0f, 66.0f, 245.0f);
      
     
-    private int size;
+    
 
     //public int[] correctArray = {3,4,1,2}; // fix order later
     //public int[] playerArray; 
@@ -27,7 +27,7 @@ public class InteractiveTiles2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        size = 0;
+       
 
         sr2 = GameObject.Find("RedSquare").GetComponent<SpriteRenderer>();
         sr3 = GameObject.Find("GreenSquare").GetComponent<SpriteRenderer>();

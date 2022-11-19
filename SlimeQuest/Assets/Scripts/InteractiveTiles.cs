@@ -13,7 +13,6 @@ public class InteractiveTiles : MonoBehaviour
 
     public GameObject nextSceneTrigger; 
     
-    private int size;
 
     //public int[] correctArray = {3,4,1,2}; // fix order later
     //public int[] playerArray; 
@@ -24,7 +23,6 @@ public class InteractiveTiles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        size = 0;
         //Debug.Log("start: " +playerArray.Length);
      
         sr2 = GameObject.Find("RedSquare").GetComponent<SpriteRenderer>();
