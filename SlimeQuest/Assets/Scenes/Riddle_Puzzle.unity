@@ -3430,8 +3430,8 @@ MonoBehaviour:
     message: What has roots as nobody sees, is taller than trees, up up it goes,
       and yet never grows?
   actors:
-  - character: {fileID: 0}
-    sprite: {fileID: 0}
+  - character: {fileID: 981082180}
+    sprite: {fileID: -1988928396, guid: eb3cc43fe7193ac409603542352eac64, type: 3}
 --- !u!114 &981082185
 MonoBehaviour:
   m_ObjectHideFlags: 0
