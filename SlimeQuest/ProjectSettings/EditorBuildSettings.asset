@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ObstacleCourse.unity
     guid: 5ec1c3469f91ad3479927232fc07a180
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: 6df0c9dc899c43b459c9033176814b3d
   m_configObjects: {}
