@@ -29,6 +29,7 @@ public class Riddles : MonoBehaviour
     public GameObject answerThreeButton3;
 
     public GameObject npc;
+    public GameObject gate;
 
     public bool correctRiddle; // to check if they correctly did riddle 
     public bool correctRiddle2;
@@ -124,7 +125,9 @@ public class Riddles : MonoBehaviour
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && exit){
             Debug.Log("done dialogue");
             //destory npc 
-            Destroy(npc);
+            Destroy(gate);
+            //Destroy(npc);
+            
             
         }
         //Debug.Log("convo " + convoProgress);
