@@ -11,6 +11,7 @@ public class Riddles : MonoBehaviour
     public DialogueTrigger riddle2Trigger;
     public DialogueTrigger riddle3Trigger;
     public DialogueTrigger exitTrigger;
+    public DialogueTrigger falseTrigger;
 
     public GameObject dialogueBox; 
     public GameObject answerOneButton;
@@ -59,7 +60,7 @@ public class Riddles : MonoBehaviour
     
 
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 0){
-            Debug.Log("testing 1");
+            //Debug.Log("testing 1");
             answerOneButton.SetActive(true);
             answerTwoButton.SetActive(true);
             answerThreeButton.SetActive(true);
@@ -84,7 +85,7 @@ public class Riddles : MonoBehaviour
             answerThreeButton2.SetActive(false); 
         }
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 2){
-            Debug.Log("testing 3");
+            //Debug.Log("testing 3");
             answerOneButton3.SetActive(true);
             answerTwoButton3.SetActive(true);
             answerThreeButton3.SetActive(true);
@@ -93,10 +94,35 @@ public class Riddles : MonoBehaviour
             answerTwoButton3.SetActive(false);
             answerThreeButton3.SetActive(false);
         }
+
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 4){ 
+            convoProgress = 0;
+            Debug.Log("false answer");
+        } 
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 5){ 
+            convoProgress = 0;
+            Debug.Log("false answer");
+        }
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 6){ 
+            convoProgress = 1;
+            Debug.Log("false answer");
+        }
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 7){ 
+            convoProgress = 1;
+            Debug.Log("false answer");
+        }
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 8){ 
+            convoProgress = 2;
+            Debug.Log("false answer");
+        }
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 9){ 
+            convoProgress = 2;
+            Debug.Log("false answer");
+        }
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && exit){
             Debug.Log("done dialogue");
         }
-        Debug.Log("convo " + convoProgress);
+        //Debug.Log("convo " + convoProgress);
     }
 
     void OnTriggerEnter2D(Collider2D collision){
@@ -114,9 +140,9 @@ public class Riddles : MonoBehaviour
         }
     }
 
+    //method for  riddle one correct answer
     public void answerOne(){
-        //method to deal with option 1
-        Debug.Log("pressed option 1");
+      
         //correct asnwer 
         convoProgress = 1;
         correctRiddle = true; 
@@ -126,39 +152,97 @@ public class Riddles : MonoBehaviour
     
     }
 
+    public void answerTwo(){
+        Debug.Log("FALSE");
+        convoProgress =4;
+        StartConvo(convoProgress);
+    }
+
+    public void answerThree(){
+        Debug.Log("FALSE");
+        convoProgress =5;
+        StartConvo(convoProgress);
+    }
+
+
+
+    //method for riddle two correct answer 
     public void answerTwo2(){
         correctRiddle=false;
         correctRiddle2 = true;
         convoProgress = 2;
         StartConvo(convoProgress);
     }
+    public void answerThree2(){
+        Debug.Log("FALSE");
+        convoProgress =6;
+        StartConvo(convoProgress);
+    }
+    public void answerOne2(){
+        Debug.Log("FALSE");
+        convoProgress =7;
+        StartConvo(convoProgress);
+    }
 
+
+    //method for the riddle three correct answer
     public void answerThree3(){
         correctRiddle2 =false;
         correctRiddle3 = true;
         convoProgress=3;
         StartConvo(convoProgress);
     }
-
+    public void answerTwo3(){
+        Debug.Log("FALSE");
+        convoProgress =8;
+        StartConvo(convoProgress);
+    }
+    public void answerOne3(){
+        Debug.Log("FALSE");
+        convoProgress =9;
+        StartConvo(convoProgress);
+    }
+    
     
 
     public void StartConvo(int num){
         switch (num)
         {
-            case 1:
+            case 1: //riddle 1 correct
                 correctRiddle = false;
             
                 riddle2Trigger.StartDialogue();
                 break; 
-            case 2:
+            case 2: //riddle 2 correct 
                 correctRiddle2 = false;
                 riddle3Trigger.StartDialogue();
                 break;
             
-            case 3:
+            case 3: //riddle 3 correct
                 correctRiddle3 = false;
                 exit = true;
                 exitTrigger.StartDialogue();
+                break;
+
+            case 4: // riddle 1 false
+                falseTrigger.StartDialogue();
+                break;
+
+            case 5: //riddle 1 false
+                falseTrigger.StartDialogue();
+                break;
+            case 6: //riddle 2 false
+                falseTrigger.StartDialogue();
+                break;
+            case 7: //riddle 2 false
+                falseTrigger.StartDialogue();
+                break;
+            case 8: //riddle 3 false
+                falseTrigger.StartDialogue();
+                break;
+
+            case 9: //riddle 3 false 
+                falseTrigger.StartDialogue();
                 break;
         }
 }
