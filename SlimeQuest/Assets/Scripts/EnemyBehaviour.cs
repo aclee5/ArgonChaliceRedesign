@@ -8,7 +8,11 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private float agroRange;
     [SerializeField] private float moveSpeed;
 
-    Rigidbody2D rb2d; 
+    private Rigidbody2D rb2d; 
+    private Vector2 movement; 
+
+    private Vector2[] moveDirections = new Vector2[] { Vector2.right, Vector2.left, Vector2.up, Vector2.down};
+    private int currentMoveDirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,11 +37,33 @@ public class EnemyBehaviour : MonoBehaviour
        Vector3 direction = player.position - transform.position; 
        float angle = Mathf.Atan2(direction.y, direction.x)*Mathf.Rad2Deg;
        rb2d.rotation = angle; 
+       direction.Normalize(); 
+       movement = direction;
+       moveCharacter(direction);  
 
 
     }
 
-    private void StopPlayerChase(){
+    
 
+    private void moveCharacter(Vector2 direction){
+        Vector2 position2D = new Vector2(transform.position.x, transform.position.y); 
+        rb2d.MovePosition(position2D + (direction*moveSpeed*Time.deltaTime));
+
+    }
+
+    private void StopPlayerChase(){
+        rb2d.velocity = new Vector2(0,0); 
+
+    }
+
+    private void ChooseMoveDirection(){
+        currentMoveDirection = Mathf.FloorToInt(Random.Range(0, moveDirections.Length));
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Player")){
+        }
     }
 }
