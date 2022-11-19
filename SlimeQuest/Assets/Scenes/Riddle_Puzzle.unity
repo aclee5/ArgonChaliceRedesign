@@ -17836,6 +17836,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: -7683077161790550687, guid: 418964af7eff1294bbf8ed032949966a,
         type: 3}
+      propertyPath: m_Color.b
+      value: 0.9705962
+      objectReference: {fileID: 0}
+    - target: {fileID: -7683077161790550687, guid: 418964af7eff1294bbf8ed032949966a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7683077161790550687, guid: 418964af7eff1294bbf8ed032949966a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.2028302
+      objectReference: {fileID: 0}
+    - target: {fileID: -7683077161790550687, guid: 418964af7eff1294bbf8ed032949966a,
+        type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -18025,6 +18040,26 @@ MonoBehaviour:
   correctRiddle3: 0
   exit: 0
   convoProgress: 0
+--- !u!95 &981082189
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981082180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1a2d0ad609b2094fa68927abb2c7d50, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &993072173
 GameObject:
   m_ObjectHideFlags: 0
