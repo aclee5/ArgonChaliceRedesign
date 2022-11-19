@@ -10,6 +10,7 @@ public class Riddles : MonoBehaviour
     public DialogueTrigger trigger;
     public DialogueTrigger riddle2Trigger;
     public DialogueTrigger riddle3Trigger;
+    public DialogueTrigger exitTrigger;
 
     public GameObject dialogueBox; 
     public GameObject answerOneButton;
@@ -29,6 +30,7 @@ public class Riddles : MonoBehaviour
     public bool correctRiddle; // to check if they correctly did riddle 
     public bool correctRiddle2;
     public bool correctRiddle3;
+    public bool exit; 
     public int convoProgress;
 
     
@@ -39,6 +41,7 @@ public class Riddles : MonoBehaviour
         //Debug.Log("hi");
        correctRiddle = false;
        correctRiddle2 = false;
+       exit = false;
        convoProgress = 0;
        answerOneButton.SetActive(false);
        answerThreeButton.SetActive(false);
@@ -53,13 +56,7 @@ public class Riddles : MonoBehaviour
     }
 
     void Update(){
-        // if(correctRiddle){
-        //    // Debug.Log("answer correct");
-        //     convoProgress =1;
-            
-        // } if(correctRiddle2){
-        //     convoProgress = 2;
-        // }
+    
 
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && convoProgress == 0){
             Debug.Log("testing 1");
@@ -96,7 +93,9 @@ public class Riddles : MonoBehaviour
             answerTwoButton3.SetActive(false);
             answerThreeButton3.SetActive(false);
         }
-
+        if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && exit){
+            Debug.Log("done dialogue");
+        }
         Debug.Log("convo " + convoProgress);
     }
 
@@ -137,8 +136,11 @@ public class Riddles : MonoBehaviour
     public void answerThree3(){
         correctRiddle2 =false;
         correctRiddle3 = true;
+        convoProgress=3;
         StartConvo(convoProgress);
     }
+
+    
 
     public void StartConvo(int num){
         switch (num)
@@ -147,12 +149,16 @@ public class Riddles : MonoBehaviour
                 correctRiddle = false;
             
                 riddle2Trigger.StartDialogue();
-                
-                //answerOneButton.GetComponentInChildren<Text>().text = "testing";
                 break; 
             case 2:
                 correctRiddle2 = false;
                 riddle3Trigger.StartDialogue();
+                break;
+            
+            case 3:
+                correctRiddle3 = false;
+                exit = true;
+                exitTrigger.StartDialogue();
                 break;
         }
 }
