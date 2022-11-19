@@ -38,6 +38,13 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // for(int i = 0; i < slots.Length; i ++){
+        //     if(i < itemIDs.Capacity){
+        //         if(slots[i] == false){
+        //             itemIDs.Remove(i); 
+        //         }
+
+        //     }
+        // }
     }
 }
