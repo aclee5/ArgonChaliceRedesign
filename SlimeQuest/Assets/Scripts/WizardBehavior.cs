@@ -8,7 +8,7 @@ public class WizardBehavior : MonoBehaviour
     public GameObject dialogueBox; 
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("Player") && FindObjectOfType<Player>().ingredientNum == 3){
+        if(collision.CompareTag("Player")){
             dialogueBox.SetActive(true); 
             trigger.StartDialogue(); 
             
@@ -16,7 +16,7 @@ public class WizardBehavior : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D collision){
-        if(collision.CompareTag("Player") && FindObjectOfType<Player>().ingredientNum == 3){
+        if(collision.CompareTag("Player")){
             dialogueBox.SetActive(false); 
         }
     }
