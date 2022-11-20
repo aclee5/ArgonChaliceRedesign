@@ -12,6 +12,8 @@ public class MazeLogic : MonoBehaviour
     //public GameObject IngredientOne; 
     public GameObject gate; 
 
+    public AudioSource buttonSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,16 +39,24 @@ public class MazeLogic : MonoBehaviour
         //chcekcs which button the player collides with
         if(collider.CompareTag("MazeB1")){
             sr.color = green;
+            buttonSound.Play();
             b1Active = true;
 
         }
         if(collider.CompareTag("MazeB2")){
             sr2.color = green;
+            buttonSound.Play();
+        
             b2Active = true;
         }
         if(collider.CompareTag("MazeB3")){
             sr3.color = green;
+            buttonSound.Play();
             b3Active = true;
         }
     }
 }
+
+
+
+

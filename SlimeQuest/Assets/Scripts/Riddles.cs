@@ -37,7 +37,7 @@ public class Riddles : MonoBehaviour
     public bool exit; 
     public int convoProgress;
 
-    
+ 
     //texts for the buttton blobbs
 
    
