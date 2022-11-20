@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneTrigger : MonoBehaviour
 {
-   // public int sceneState; 
     public int nextSceneBuildIndex;
     public string id; 
     

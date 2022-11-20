@@ -6461,7 +6461,7 @@ GameObject:
   - component: {fileID: 1071239943}
   - component: {fileID: 1071239941}
   m_Layer: 0
-  m_Name: ExitToMain
+  m_Name: 'Riddle - Void Level Move '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6479,9 +6479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ec2d77db4988a4eaaf93d77ffd8995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneBuildIndex: 2
-  sceneState: 0
-  insideLevel: 0
+  nextSceneBuildIndex: 11
   id: 
 --- !u!4 &1071239942
 Transform:
@@ -7469,8 +7467,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneBuildIndex: 3
-  sceneState: 1
-  insideLevel: 1
   id: 
 --- !u!1001 &2039171790
 PrefabInstance:
