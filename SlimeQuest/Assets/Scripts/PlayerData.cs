@@ -7,8 +7,7 @@ public class PlayerData
 {
     public string characterName; 
     public List<Vector3> respawnPoints; 
-    public int ingredientNum;
-    public int dragonItemNum; 
+    public int coinNum;
     public List<int> itemIDs; 
 
 }

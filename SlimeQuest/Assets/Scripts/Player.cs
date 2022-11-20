@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player : Character
 {
      //int to look after the amount of ingredients 
-    public int ingredientNum;
-    public int dragonItemNum; 
+    public int coinNum;
     public List<Vector3> respawnPoints = new List<Vector3>(); 
    
     
@@ -18,8 +17,9 @@ public class Player : Character
 
     // Start is called before the first frame update
     void Awake(){
-        ingredientNum = 0;
-        dragonItemNum = 0;
+        // ingredientNum = 0;
+        // dragonItemNum = 0;
+        coinNum = 0; 
         FindObjectOfType<GameHandler>().LoadPlayerData();  
 
     }
@@ -51,12 +51,12 @@ public class Player : Character
     private void OnTriggerEnter2D(Collider2D collider){
 
         //checks if item is a potion ingredient and adds to counter 
-        if(collider.CompareTag("PotionIngredient")){
-            ingredientNum +=1;
-        }
-        if(collider.CompareTag("DragonItem")){
-            dragonItemNum +=1;
-        }
+        // if(collider.CompareTag("PotionIngredient")){
+        //     ingredientNum +=1;
+        // }
+        // if(collider.CompareTag("DragonItem")){
+        //     dragonItemNum +=1;
+        // }
 
         // for(int i=0; i<inventory.slots.Length; i++){
         //     if(inventory.isFull[i] == false){
@@ -75,14 +75,17 @@ public class Player : Character
     public void SetName(string newName){
         characterName = newName; 
     }
-
-    public void SetIngredientNumber(int num){
-        ingredientNum = num; 
+    public void SetCoinNum(int num){
+        coinNum = num; 
     }
 
-    public void SetDragonNumber(int num){
-        dragonItemNum = num; 
-    }
+    // public void SetIngredientNumber(int num){
+    //     ingredientNum = num; 
+    // }
+
+    // public void SetDragonNumber(int num){
+    //     dragonItemNum = num; 
+    // }
 
     public void PlaceCheckPoint(int sceneIndex, Vector3 t){
         respawnPoints[sceneIndex] = t; 
