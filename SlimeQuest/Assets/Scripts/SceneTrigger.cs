@@ -7,20 +7,12 @@ public class SceneTrigger : MonoBehaviour
 {
    // public int sceneState; 
     public int nextSceneBuildIndex;
-    public int sceneState; 
-    public bool insideLevel; 
     public string id; 
     
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
             FindObjectOfType<GameHandler>().SavePlayerData(); 
-            if(insideLevel){
-                SceneManager.LoadScene(nextSceneBuildIndex, LoadSceneMode.Single);
-            }
-            else{
-                FindObjectOfType<GameManager>().loadScene(sceneState); 
-            }
-          
+            SceneManager.LoadScene(nextSceneBuildIndex, LoadSceneMode.Single);       
             
             
 
