@@ -823,7 +823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: Correct!
+    message: Correct! (press space to continue)
   - actorID: 0
     message: 'Your sharp brain has impressed me. I will stand no further in your
       way.. '
@@ -17656,10 +17656,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: Correct. My next riddle is...
+    message: Correct. My next riddle is... (press space to continue)
   - actorID: 0
     message: What has roots as nobody sees, is taller than trees, up up it goes,
-      and yet never grows?
+      and yet never grows? (press space to continue)
   actors:
   - character: {fileID: 0}
     sprite: {fileID: 0}
@@ -18113,9 +18113,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: If you wish to pass you must put your knowledge to the test
+    message: If you wish to pass you must put your knowledge to the test (press space
+      to continue)
   - actorID: 0
-    message: What has to be broken before you can use it?
+    message: What has to be broken before you can use it? (press space to continue)
   actors:
   - character: {fileID: 981082180}
     sprite: {fileID: -1988928396, guid: eb3cc43fe7193ac409603542352eac64, type: 3}
@@ -19495,9 +19496,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: Correct. My next riddle is...
+    message: Correct. My next riddle is...(press space to continue)
   - actorID: 0
-    message: What is always in front of you but can't be seen?
+    message: What is always in front of you but can't be seen? (press space to continue)
   actors:
   - character: {fileID: 0}
     sprite: {fileID: 0}
@@ -19596,7 +19597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: 'That is incorrect. You may try again. '
+    message: That is incorrect. You may try again. (press space to continue)
   actors:
   - character: {fileID: 0}
     sprite: {fileID: 0}
