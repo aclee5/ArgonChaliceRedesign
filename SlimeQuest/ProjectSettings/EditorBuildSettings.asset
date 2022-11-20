@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Riddle - Void Choice.unity
     guid: c528fcc975eb38848815442639e0d837
+  - enabled: 1
+    path: Assets/Scenes/Maze-Void Choice.unity
+    guid: 81b243473ca77b2489f50ffe629abf6f
   m_configObjects: {}
