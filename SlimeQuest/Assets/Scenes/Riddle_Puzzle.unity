@@ -19091,7 +19091,7 @@ GameObject:
   - component: {fileID: 1195135492}
   - component: {fileID: 1195135491}
   m_Layer: 0
-  m_Name: Riddle Level Move
+  m_Name: End Room Level Move
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -19109,7 +19109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ec2d77db4988a4eaaf93d77ffd8995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneBuildIndex: 7
+  nextSceneBuildIndex: 11
   id: 
 --- !u!61 &1195135492
 BoxCollider2D:
