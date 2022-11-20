@@ -2076,6 +2076,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngredientOne
       objectReference: {fileID: 0}
+    - target: {fileID: 980889048467797038, guid: 8325278500daae0478d6313e54445b60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1382977108490467971, guid: 8325278500daae0478d6313e54445b60,
         type: 3}
       propertyPath: m_RootOrder
@@ -8405,12 +8410,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d0105486f3f144cb9d3550c54771ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sr: {fileID: 0}
-  sr2: {fileID: 0}
-  sr3: {fileID: 0}
-  sr4: {fileID: 0}
-  sr5: {fileID: 0}
-  sr6: {fileID: 0}
+  sr2: {fileID: 1024232336}
+  sr3: {fileID: 283222037}
+  sr4: {fileID: 126343638}
+  sr5: {fileID: 1252222872}
+  sr6: {fileID: 1702922839}
   colorRed: {r: 1, g: 0, b: 0, a: 1}
   colorBlack: {r: 0, g: 0, b: 0, a: 1}
   colorBlue: {r: 0.04049486, g: 0.29425612, b: 0.6603774, a: 1}
