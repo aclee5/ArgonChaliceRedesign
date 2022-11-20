@@ -8419,6 +8419,9 @@ MonoBehaviour:
   colorPurple: {r: 0.49816766, g: 0.08187969, b: 0.754717, a: 1}
   pressTileSound: {fileID: 1742058025}
   wrongSound: {fileID: 1546870102}
+  ingredientArea: {fileID: 999221046}
+  ingredientBarrier: {fileID: 687214585}
+  ingredient: {fileID: 0}
   areaBlocker: {fileID: 1019572101}
 --- !u!1 &1440361257
 GameObject:

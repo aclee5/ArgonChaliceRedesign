@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractiveTiles2 : MonoBehaviour
 {
-    public SpriteRenderer sr, sr2, sr3, sr4, sr5, sr6;
+    public SpriteRenderer sr2, sr3, sr4, sr5, sr6;
     public Color colorRed = Color.red;
     public Color colorBlack = Color.black;
     public Color colorBlue = Color.blue;
