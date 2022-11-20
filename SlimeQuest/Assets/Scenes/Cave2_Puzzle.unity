@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &86498469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 980889048467797038, guid: 8325278500daae0478d6313e54445b60,
-    type: 3}
-  m_PrefabInstance: {fileID: 594346190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &89442396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,7 +2079,7 @@ PrefabInstance:
     - target: {fileID: 980889048467797038, guid: 8325278500daae0478d6313e54445b60,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1382977108490467971, guid: 8325278500daae0478d6313e54445b60,
         type: 3}
@@ -8431,7 +8425,6 @@ MonoBehaviour:
   wrongSound: {fileID: 1546870102}
   ingredientArea: {fileID: 999221046}
   ingredientBarrier: {fileID: 687214585}
-  ingredient: {fileID: 86498469}
   areaBlocker: {fileID: 1019572101}
 --- !u!1 &1440361257
 GameObject:
