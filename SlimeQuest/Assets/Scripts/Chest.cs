@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-
+    public AudioSource chestSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,7 @@ public class Chest : MonoBehaviour
    void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Player")){
             RandomGenerator();
+            chestSound.Play();
             Destroy(gameObject);
         }
    }
