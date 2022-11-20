@@ -12,7 +12,7 @@ public class InteractiveTiles2 : MonoBehaviour
     public Color colorYellow = Color.yellow;
     public Color colorPurple = new Color(176.0f, 66.0f, 245.0f);
      
-    
+    public AudioSource pressTileSound, wrongSound;
     
 
     //public int[] correctArray = {3,4,1,2}; // fix order later
@@ -90,23 +90,29 @@ public class InteractiveTiles2 : MonoBehaviour
 
               if(counterTime == 1 && i == "2")
               {
+                pressTileSound.Play();
                 Debug.Log("got here " +counterTime);
                 sr5.color = colorBlack;
               }
               else if(counterTime == 2 && i == "3")
               {
+                pressTileSound.Play();
                   sr2.color = colorBlack;
               } 
               else if (counterTime == 3 && i == "5"){
+                pressTileSound.Play();
                 sr6.color = colorBlack;
               } 
               else if(counterTime == 4 && i == "4")
               {
+                pressTileSound.Play();
                 sr3.color = colorBlack;
               } else if(counterTime == 5 && i == "1"){
+                pressTileSound.Play();
                 sr4.color = colorBlack;
               }
               else {
+                wrongSound.Play();
                 sr2.color = colorRed;
                 sr3.color = colorGreen;
                 sr4.color = colorBlue;

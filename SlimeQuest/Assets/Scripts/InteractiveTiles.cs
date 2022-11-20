@@ -53,23 +53,23 @@ public class InteractiveTiles : MonoBehaviour
 
         bool startCompare = false;
         if(collider.CompareTag("Red")){
-            // pressTileSound.Play();
+            
              playerArray2.Add("3");
              startCompare = true;
            } 
            if(collider.CompareTag("Green")){
-           // pressTileSound.Play();
+           
              playerArray2.Add("4");
              startCompare = true;
            } 
            if(collider.CompareTag("Blue")) {
-         //   pressTileSound.Play();
+         
              playerArray2.Add("1");
              startCompare = true;
             
            } 
            if(collider.CompareTag("Yellow")){
-           // pressTileSound.Play();
+      
              playerArray2.Add("2");
              startCompare =true;
          
