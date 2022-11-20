@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2483511976383304899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,3 +127,4 @@ MonoBehaviour:
   itemButton: {fileID: 3940843864640572803, guid: f1a7e446a2948554abfd1c4d9dbdeb09,
     type: 3}
   itemID: 2
+  pickupSound: {fileID: 0}

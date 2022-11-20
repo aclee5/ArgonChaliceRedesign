@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2808734021452718508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   itemButton: {fileID: 7573798906556642259, guid: d5e64dc814bc44d48b088ca275f3a21a,
     type: 3}
   itemID: 4
+  pickupSound: {fileID: 0}
 --- !u!61 &-8740883703833582971
 BoxCollider2D:
   m_ObjectHideFlags: 0
