@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 2664239335109783976, guid: 340f4f5ab4dfd054d8c909e2ed17b0d5,
     type: 3}
-  itemID: 5
+  itemID: 3
 --- !u!95 &-5707488392871512329
 Animator:
   serializedVersion: 4

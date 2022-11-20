@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 0.13, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &-5499605617662843003
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 2930488902417088530, guid: bc8081f5d328a2247bab03a89bbb4067,
     type: 3}
-  itemID: 7
+  itemID: 6
 --- !u!61 &-422962367120923208
 BoxCollider2D:
   m_ObjectHideFlags: 0
