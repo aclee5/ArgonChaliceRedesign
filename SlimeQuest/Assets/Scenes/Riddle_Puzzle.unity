@@ -728,8 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9900a0610a2c5c44bb3633b3132647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actorImage: {fileID: 0}
-  actorName: {fileID: 0}
+  actorImage: {fileID: 1990608481}
+  actorName: {fileID: 521019327}
   messageText: {fileID: 524308511}
   backgroundBox: {fileID: 266785188}
   isActive: 0
@@ -18046,7 +18046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d5bb6989c58c9408549567c0da491a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: BOb
+  characterName: Bob
 --- !u!61 &981082182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19942,14 +19942,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.20392159, g: 1, b: 0.9725491, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -572599358, guid: f3a0b516a01d3ad439d51843d4fc7e0c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
