@@ -10193,7 +10193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: "The tears of the students of knowledge, as they\u2019re misery is the
+    message: "The tears of the students of knowledge. They\u2019re misery is the
       sweetest"
   actors:
   - character: {fileID: 128744270}
@@ -10621,10 +10621,10 @@ RectTransform:
   m_Father: {fileID: 632875656}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -262.43768, y: 95.01572}
-  m_SizeDelta: {x: 296.5264, y: 46.6453}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 10.400024, y: 133.5}
+  m_SizeDelta: {x: 296.52637, y: 46.6453}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072554676
 MonoBehaviour:
