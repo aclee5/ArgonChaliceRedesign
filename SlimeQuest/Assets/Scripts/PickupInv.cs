@@ -8,7 +8,8 @@ public class PickupInv : MonoBehaviour
     private Inventory inventory;
     public GameObject itemButton;
     public int itemID; 
- 
+    
+    public AudioSource pickupSound;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +26,12 @@ public class PickupInv : MonoBehaviour
         if(collider.CompareTag("Player")){
             //enable text 
             
-          
+          pickupSound.Play();
             for(int i=0; i<inventory.slots.Length; i++){
                 if(i < inventory.slots.Length){
                     if(inventory.isFull[i] == false){
                         //item can be added to inventory
+                        
                         inventory.isFull[i] = true;
                         inventory.itemIDs.Add(itemID); 
                         Instantiate(itemButton, inventory.slots[i].transform, false);

@@ -127,3 +127,5 @@ MonoBehaviour:
   itemButton: {fileID: 4724980894197501823, guid: 804dfe7292e910b4fac1d62d23bccaee,
     type: 3}
   itemID: 0
+  pickupSound: {fileID: 6237502720145951174, guid: e7ed88ebb76731a42a813592df91292f,
+    type: 3}
