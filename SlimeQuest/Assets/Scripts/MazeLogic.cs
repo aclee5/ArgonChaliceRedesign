@@ -12,7 +12,7 @@ public class MazeLogic : MonoBehaviour
     //public GameObject IngredientOne; 
     public GameObject gate; 
 
-    public AudioSource buttonSound;
+    public AudioSource buttonSound, gateSound;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class MazeLogic : MonoBehaviour
     {
         if(b1Active && b2Active && b3Active){
             ///win condition all buttons pressed can spawn item and then leave
-            
+            gateSound.Play();
             Destroy(gate); //remove the gate 
         }
     }

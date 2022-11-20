@@ -37,7 +37,7 @@ public class Riddles : MonoBehaviour
     public bool exit; 
     public int convoProgress;
 
- 
+    public AudioSource gateSound;
     //texts for the buttton blobbs
 
    
@@ -125,6 +125,7 @@ public class Riddles : MonoBehaviour
         if(dialogueBox.GetComponent<DialogueManager>().conversationFinished && exit){
             Debug.Log("done dialogue");
             //destory npc 
+            gateSound.Play();
             Destroy(gate);
             Destroy(npc);
             
