@@ -14,9 +14,16 @@ public class GameManager : MonoBehaviour
 
     private const int MAIN_MAP = 0; 
     
-    private const int INGREDIENT_1 = 1;
-    private const int INGREDIENT_2 = 2;
-    private const int INGREDIENT_3 = 3; 
+    private const int CAVEPUZZLE_PT1 = 1;
+    private const int CAVEPUZZLE_PT2 = 2;
+    private const int BEETLERUN = 3; 
+    private const int PUZZLEFORK = 4;
+    private const int RUNFORK = 5; 
+    private const int RIDDLE = 6; 
+    private const int VOID = 7; 
+    private const int MAZE = 9; 
+    private const int ENDROOM = 10; 
+    
 
 
     // Start is called before the first frame update
@@ -58,14 +65,35 @@ public class GameManager : MonoBehaviour
                 state = MAIN_MAP; 
                 SceneManager.LoadScene("Main");
                 break;
-            case INGREDIENT_1:
-                state = INGREDIENT_1; 
+            case CAVEPUZZLE_PT1:
+                state = CAVEPUZZLE_PT1; 
                 SceneManager.LoadScene("Cave_Puzzle");
                 break;
-            case INGREDIENT_2:
+            case CAVEPUZZLE_PT2:
+                SceneManager.LoadScene("Cave2_Puzzle");
                 break;
-            case INGREDIENT_3:
+            case BEETLERUN:
+                SceneManager.LoadScene("ObstacleCourse");
                 break;
+            case PUZZLEFORK:
+                SceneManager.LoadScene("Maze-Void Choice");
+                break;
+            case RUNFORK:
+                SceneManager.LoadScene("Riddle-Void Choice");
+                break;
+            case RIDDLE:
+                SceneManager.LoadScene("Riddle_Puzzle");
+                break;
+            case VOID:
+                SceneManager.LoadScene("Void");
+                break;
+            case MAZE:
+                SceneManager.LoadScene("Maze");
+                break;  
+
+            case ENDROOM:
+                SceneManager.LoadScene("End room");
+                break; 
             case DRAGON_DUNGEON:
                 state = DRAGON_DUNGEON; 
                 SceneManager.LoadScene("Dragon"); 

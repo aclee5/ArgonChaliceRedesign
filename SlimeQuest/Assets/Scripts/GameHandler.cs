@@ -65,6 +65,6 @@ public class GameHandler : MonoBehaviour
 
     public void ResetPlayerData(){
        SaveSystem.Delete(); 
-       UnityEditor.AssetDatabase.Refresh(); 
+       //UnityEditor.AssetDatabase.Refresh(); 
     }
 }
