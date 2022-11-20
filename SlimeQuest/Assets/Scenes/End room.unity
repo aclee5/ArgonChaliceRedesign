@@ -22349,6 +22349,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1529405168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1536458541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5564085813631190184, guid: e5b2bb872994fc643b9324887c32d3a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5564085813767625248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1614447175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23248,8 +23254,8 @@ MonoBehaviour:
   actors:
   - character: {fileID: 2051981758}
     sprite: {fileID: 21300000, guid: e25d76b093da56848863c853e3d0c67e, type: 3}
-  - character: {fileID: 2051981758}
-    sprite: {fileID: 21300000, guid: e25d76b093da56848863c853e3d0c67e, type: 3}
+  - character: {fileID: 1536458541}
+    sprite: {fileID: 21300000, guid: dd3eb5157eade5d42b6e7aa5d137eea3, type: 3}
 --- !u!114 &2051981760
 MonoBehaviour:
   m_ObjectHideFlags: 0
