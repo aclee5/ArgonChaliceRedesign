@@ -13,7 +13,7 @@ public class InteractiveTiles : MonoBehaviour
 
     public GameObject nextSceneTrigger; 
     
-
+    public AudioSource pressTileSound, wrongSound;
     
     
     ArrayList playerArray2 = new ArrayList();
@@ -50,22 +50,26 @@ public class InteractiveTiles : MonoBehaviour
       
         //here can test if the correct square is triggered and change its colour 
         //if statements to check which square they hit 
-    
+
         bool startCompare = false;
         if(collider.CompareTag("Red")){
+            
              playerArray2.Add("3");
              startCompare = true;
            } 
            if(collider.CompareTag("Green")){
+           
              playerArray2.Add("4");
              startCompare = true;
            } 
            if(collider.CompareTag("Blue")) {
+         
              playerArray2.Add("1");
              startCompare = true;
             
            } 
            if(collider.CompareTag("Yellow")){
+      
              playerArray2.Add("2");
              startCompare =true;
          
@@ -85,20 +89,25 @@ public class InteractiveTiles : MonoBehaviour
               if(counterTime == 1  && i == "1")
               {
                 Debug.Log("got here " +counterTime);
+                pressTileSound.Play();
                 sr4.color = colorBlack;
               }
               else if(counterTime == 2 && i == "2")
               {
+                  pressTileSound.Play();
                   sr5.color = colorBlack;
               } 
               else if (counterTime == 3 && i == "3"){
+                pressTileSound.Play();
                 sr2.color = colorBlack;
               } 
               else if(counterTime == 4 && i == "4")
               {
+                pressTileSound.Play();
                 sr3.color = colorBlack;
               }
               else {
+                wrongSound.Play();
                 sr2.color = colorRed;
                 sr3.color = colorGreen;
                 sr4.color = colorBlue;
