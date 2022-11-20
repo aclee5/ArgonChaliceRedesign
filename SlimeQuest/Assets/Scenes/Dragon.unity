@@ -8394,7 +8394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ab5586c54c8c96e4c8c8627ccb5e4214, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8403,7 +8403,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 5
 --- !u!222 &1552862819
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8498,7 +8498,8 @@ MonoBehaviour:
   m_text: 'Next '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9e77d5f8bde5c64ea9b7f3f02c96dba, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -1405315235724684811, guid: e9e77d5f8bde5c64ea9b7f3f02c96dba,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9090,7 +9091,7 @@ PrefabInstance:
     - target: {fileID: 1984787367769115716, guid: 9eb9d1ab51c09fc479cc3b2a211daa69,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -122.1
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 1984787367769115716, guid: 9eb9d1ab51c09fc479cc3b2a211daa69,
         type: 3}
@@ -9290,7 +9291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1758501691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9814,7 +9815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ab5586c54c8c96e4c8c8627ccb5e4214, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9823,7 +9824,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 10
 --- !u!222 &2072554678
 CanvasRenderer:
   m_ObjectHideFlags: 0
