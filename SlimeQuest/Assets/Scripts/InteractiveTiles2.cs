@@ -16,7 +16,7 @@ public class InteractiveTiles2 : MonoBehaviour
     
     public GameObject ingredientArea;
     public GameObject ingredientBarrier;
-    public GameObject ingredient;
+    
 
     //public int[] correctArray = {3,4,1,2}; // fix order later
     //public int[] playerArray; 
@@ -32,7 +32,7 @@ public class InteractiveTiles2 : MonoBehaviour
     {
        ingredientArea.SetActive(false);
        ingredientBarrier.SetActive(false);
-       ingredient.SetActive(false);
+       
 
         sr2 = GameObject.Find("RedSquare").GetComponent<SpriteRenderer>();
         sr3 = GameObject.Find("GreenSquare").GetComponent<SpriteRenderer>();
@@ -46,7 +46,7 @@ public class InteractiveTiles2 : MonoBehaviour
             areaBlocker.SetActive(false); 
             ingredientArea.SetActive(true);
             ingredientBarrier.SetActive(true);
-            ingredient.SetActive(true);
+            
 
         }
 
