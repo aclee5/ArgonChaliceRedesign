@@ -12,8 +12,9 @@ public class PlayerNameInput : MonoBehaviour
 
     public void StoreName(){
         
-        name = inputField.text;
-        player.characterName = charName;  
+        charName = inputField.text;
+        player.characterName = charName;
+        Debug.Log("Player is" + charName);
 
     }
 
