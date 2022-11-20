@@ -15,9 +15,16 @@ public class DragonDialogue : Character
     public GameObject nextButton; 
 
 
+    public AudioSource switchBGmusic;
+    public AudioSource bgmusic;
+
+    void Awake(){
+        bgmusic.Play();
+    }
     // Start is called before the first frame update
     void Start()
     {
+        
         dialogueBox.SetActive(false);
         conversationProgress = 0;
         ingredientNum = 0; 
@@ -51,6 +58,8 @@ public class DragonDialogue : Character
 
          if(conversationProgress == 2 && dialogueBox.GetComponent<DialogueManager>().conversationFinished){
             potion.SetActive(true);
+            bgmusic.Stop();
+            switchBGmusic.Play();
             dragonConversations[9].StartDialogue();
             conversationProgress = 3;  
          }

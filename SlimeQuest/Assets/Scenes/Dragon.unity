@@ -577,6 +577,8 @@ MonoBehaviour:
   conversationProgress: 0
   potion: {fileID: 1604244220}
   nextButton: {fileID: 2072554674}
+  switchBGmusic: {fileID: 978661982}
+  bgmusic: {fileID: 237717518}
 --- !u!1 &134908237
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +718,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bc417172a79fcc946a18f2844f645eaa, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.214
   m_Pitch: 1
   Loop: 1
