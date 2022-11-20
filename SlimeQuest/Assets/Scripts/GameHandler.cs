@@ -29,8 +29,7 @@ public class GameHandler : MonoBehaviour
 
         PlayerData playerData = new PlayerData(); 
             playerData.characterName = player.characterName;
-            playerData.ingredientNum = player.ingredientNum; 
-            playerData.dragonItemNum = player.dragonItemNum;
+            playerData.coinNum = player.coinNum; 
             playerData.respawnPoints = player.respawnPoints; 
             playerData.itemIDs = inventory.itemIDs; 
 
@@ -50,8 +49,7 @@ public class GameHandler : MonoBehaviour
             Inventory inventory = (Inventory)FindObjectOfType(typeof(Inventory)); 
             
             player.SetName(playerData.characterName);
-            player.SetIngredientNumber(playerData.ingredientNum); 
-            player.SetDragonNumber(playerData.dragonItemNum);
+            player.SetCoinNum(playerData.coinNum); 
             player.respawnPoints = playerData.respawnPoints; 
             inventory.itemIDs = playerData.itemIDs; 
 

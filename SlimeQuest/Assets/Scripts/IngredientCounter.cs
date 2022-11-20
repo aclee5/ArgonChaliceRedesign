@@ -18,6 +18,6 @@ public class IngredientCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ingredientCounter.text = "Ingredients Collected: " + player.ingredientNum + "/3";
+        ingredientCounter.text = player.coinNum.ToString();
     }
 }

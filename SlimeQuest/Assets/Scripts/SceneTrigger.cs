@@ -18,10 +18,6 @@ public class SceneTrigger : MonoBehaviour
                 SceneManager.LoadScene(nextSceneBuildIndex, LoadSceneMode.Single);
             }
             else{
-                if (id == "DragonEntrance" && FindObjectOfType<Player>().ingredientNum != 3){
-                    return; 
-                }
-                
                 FindObjectOfType<GameManager>().loadScene(sceneState); 
             }
           
