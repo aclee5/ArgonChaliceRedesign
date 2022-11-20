@@ -164,8 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  ingredientNum: 0
-  dragonItemNum: 0
+  coinNum: 0
   respawnPoints: []
 --- !u!212 &4263107985427770770
 SpriteRenderer:
@@ -266,7 +265,6 @@ MonoBehaviour:
   - {fileID: 980889048467797038, guid: 8325278500daae0478d6313e54445b60, type: 3}
   - {fileID: 8646410602492807214, guid: f39b9ae7463d37a47b9a0b64b1ebde91, type: 3}
   - {fileID: 2483511976383304899, guid: f6076127f58efd949ad8d5aa5a9f677c, type: 3}
-  - {fileID: 2884395533008931542, guid: e919ebd4710fe524b970fcd77ba97af2, type: 3}
   - {fileID: 2787786429110503860, guid: 97835b2a4035a3f4390f7bdf5591a977, type: 3}
   - {fileID: 2808734021452718508, guid: 88ab380c041f07c4f96c86a255156911, type: 3}
   - {fileID: 2787786429110503860, guid: 0bd0093049fe7ee4888814e33c4d3483, type: 3}
