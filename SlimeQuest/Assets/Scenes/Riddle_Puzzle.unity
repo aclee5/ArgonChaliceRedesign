@@ -1194,8 +1194,8 @@ MonoBehaviour:
     message: 'Your sharp brain has impressed me. I will stand no further in your
       way.. '
   actors:
-  - character: {fileID: 0}
-    sprite: {fileID: 0}
+  - character: {fileID: 981082180}
+    sprite: {fileID: -572599358, guid: f3a0b516a01d3ad439d51843d4fc7e0c, type: 3}
 --- !u!1 &487695586
 GameObject:
   m_ObjectHideFlags: 0
@@ -12739,6 +12739,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 583535265}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &583535267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5564085813631190189, guid: e5b2bb872994fc643b9324887c32d3a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 583535265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701cc9d5cb545024aa347673d656e406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &640332042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18033,8 +18045,8 @@ MonoBehaviour:
     message: What has roots as nobody sees, is taller than trees, up up it goes,
       and yet never grows? (press space to continue)
   actors:
-  - character: {fileID: 0}
-    sprite: {fileID: 0}
+  - character: {fileID: 981082180}
+    sprite: {fileID: -572599358, guid: f3a0b516a01d3ad439d51843d4fc7e0c, type: 3}
 --- !u!1 &866911523
 GameObject:
   m_ObjectHideFlags: 0
@@ -19294,7 +19306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2090a0e4bc3f8f1459d1d4685e533966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 583535267}
   ingredientCounter: {fileID: 1198098804}
 --- !u!222 &1198098806
 CanvasRenderer:
@@ -20151,8 +20163,8 @@ MonoBehaviour:
   - actorID: 0
     message: What is always in front of you but can't be seen? (press space to continue)
   actors:
-  - character: {fileID: 0}
-    sprite: {fileID: 0}
+  - character: {fileID: 981082180}
+    sprite: {fileID: -572599358, guid: f3a0b516a01d3ad439d51843d4fc7e0c, type: 3}
 --- !u!1 &1850620318
 GameObject:
   m_ObjectHideFlags: 0
@@ -20250,8 +20262,8 @@ MonoBehaviour:
   - actorID: 0
     message: That is incorrect. You may try again. (press space to continue)
   actors:
-  - character: {fileID: 0}
-    sprite: {fileID: 0}
+  - character: {fileID: 981082180}
+    sprite: {fileID: -572599358, guid: f3a0b516a01d3ad439d51843d4fc7e0c, type: 3}
 --- !u!1001 &1907529594
 PrefabInstance:
   m_ObjectHideFlags: 0

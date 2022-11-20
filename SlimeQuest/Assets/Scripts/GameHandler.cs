@@ -30,7 +30,7 @@ public class GameHandler : MonoBehaviour
         PlayerData playerData = new PlayerData(); 
             playerData.characterName = player.characterName;
             playerData.coinNum = player.coinNum; 
-            playerData.respawnPoints = player.respawnPoints; 
+            // playerData.respawnPoints = player.respawnPoints; 
             playerData.itemIDs = inventory.itemIDs; 
 
         string json = JsonUtility.ToJson(playerData);
@@ -50,7 +50,7 @@ public class GameHandler : MonoBehaviour
             
             player.SetName(playerData.characterName);
             player.SetCoinNum(playerData.coinNum); 
-            player.respawnPoints = playerData.respawnPoints; 
+            // player.respawnPoints = playerData.respawnPoints; 
             inventory.itemIDs = playerData.itemIDs; 
 
             

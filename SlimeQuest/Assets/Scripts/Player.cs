@@ -8,7 +8,7 @@ public class Player : Character
 {
      //int to look after the amount of ingredients 
     public int coinNum;
-    public List<Vector3> respawnPoints = new List<Vector3>(); 
+    // public List<Vector3> respawnPoints = new List<Vector3>(); 
    
     
     //inventory stuff 
@@ -25,9 +25,9 @@ public class Player : Character
     }
     void Start()
     {
-        if(respawnPoints.Capacity-1 >= SceneManager.GetActiveScene().buildIndex){
-            transform.position = respawnPoints[SceneManager.GetActiveScene().buildIndex]; 
-        }             
+        // if(respawnPoints.Capacity-1 >= SceneManager.GetActiveScene().buildIndex){
+        //     transform.position = respawnPoints[SceneManager.GetActiveScene().buildIndex]; 
+        // }             
           
         if (string.IsNullOrEmpty(characterName)){
             characterName = "Player"; 
@@ -87,8 +87,8 @@ public class Player : Character
     //     dragonItemNum = num; 
     // }
 
-    public void PlaceCheckPoint(int sceneIndex, Vector3 t){
-        respawnPoints[sceneIndex] = t; 
-    }
+    // public void PlaceCheckPoint(int sceneIndex, Vector3 t){
+    //     respawnPoints[sceneIndex] = t; 
+    // }
 }
  
