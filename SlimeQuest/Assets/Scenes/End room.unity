@@ -23085,39 +23085,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: "So you\u2019ve collected all the items necessary to make the Elixir
-      of Life. "
+    message: You've come a long ways. I understand you seek the Elixir of Life.
   - actorID: 1
-    message: 'Yes I did, but who are you?   '
+    message: I.. Yes, but who are you?
   - actorID: 0
-    message: "Me? Let\u2019s just say I\u2019ve been observing you on your journey,
-      its been quite amusing. "
+    message: 'I would place your concern on what lies in front of you instead.. '
   - actorID: 1
-    message: "Okay \u2013 "
+    message: What lies ahead??!
   - actorID: 0
-    message: 'Unfortunately if you end your quest now you will not be able to save
-      your little Sam. '
-  - actorID: 1
-    message: 'What why not?! '
+    message: 'You cannot save little Sam yet.. You still need eternal fire. '
   - actorID: 0
-    message: 'There is no method to create the potion that you can complete the potion
-      by yourself. You require the eternal fire of a great magical beast to forge
-      the potion, like a dragon. '
-  - actorID: 1
-    message: 'A Dragon? '
-  - actorID: 0
-    message: "Yes a Dragon, there is one nearby in a sacred cave. You must have come
-      across it at some point if you\u2019ve collected these items.  "
-  - actorID: 1
-    message: "I don\u2019t know if I have.  "
-  - actorID: 0
-    message: "Turn back to the deepest depths of the forest.  You must make haste
-      and prepare wisely when asking for their assistance\u2026they are quite particular
-      about their company\u2026 I must take my leave now, thank you for your entertainment,
-      I wish you much luck on your quest.  "
-  - actorID: 1
-    message: 'Thank you for your wisdom.  '
+    message: Seek the dragon deep within the darkness.. But be warned, not everyone
+      takes kindly to meddling slimes.
   actors:
+  - character: {fileID: 2051981758}
+    sprite: {fileID: 21300000, guid: e25d76b093da56848863c853e3d0c67e, type: 3}
   - character: {fileID: 2051981758}
     sprite: {fileID: 21300000, guid: e25d76b093da56848863c853e3d0c67e, type: 3}
 --- !u!114 &2051981760
