@@ -20,7 +20,7 @@ public class Player : Character
         // ingredientNum = 0;
         // dragonItemNum = 0;
         coinNum = 0; 
-        FindObjectOfType<GameHandler>().LoadPlayerData();  
+        //FindObjectOfType<GameHandler>().LoadPlayerData();  
 
     }
     void Start()
@@ -28,7 +28,7 @@ public class Player : Character
         // if(respawnPoints.Capacity-1 >= SceneManager.GetActiveScene().buildIndex){
         //     transform.position = respawnPoints[SceneManager.GetActiveScene().buildIndex]; 
         // }             
-          
+        FindObjectOfType<GameHandler>().LoadPlayerData();
         if (string.IsNullOrEmpty(characterName)){
             characterName = "Player"; 
         }
