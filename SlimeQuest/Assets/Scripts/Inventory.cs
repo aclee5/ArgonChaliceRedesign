@@ -23,7 +23,8 @@ public class Inventory : MonoBehaviour
                 if(i < slots.Length){
                     int id = itemIDs[i];
                     PickupInv item = items[id].GetComponent<PickupInv>(); 
-                    Instantiate(item.itemButton, slots[i].transform, false); 
+                    Instantiate(item.itemButton, slots[i].transform, false);
+                    isFull[i] = true; 
                     Debug.Log("instantiated item " + items[id]+  " at slot" + slots[i]);
 
                 }               
