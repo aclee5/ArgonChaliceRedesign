@@ -1,1 +1,1 @@
-{"characterName":"Edgar","coinNum":0,"itemIDs":[2]}
+{"characterName":"Player","coinNum":8,"itemIDs":[0]}
