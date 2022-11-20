@@ -44,8 +44,6 @@ public class ObstacleGenerator : MonoBehaviour
             gap -= 1; 
         
         }
-
-            
             
             
         }
