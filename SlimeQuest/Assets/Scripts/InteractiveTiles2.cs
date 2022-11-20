@@ -14,6 +14,9 @@ public class InteractiveTiles2 : MonoBehaviour
      
     public AudioSource pressTileSound, wrongSound;
     
+    public GameObject ingredientArea;
+    public GameObject ingredientBarrier;
+    public GameObject ingredient;
 
     //public int[] correctArray = {3,4,1,2}; // fix order later
     //public int[] playerArray; 
@@ -27,7 +30,9 @@ public class InteractiveTiles2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+       ingredientArea.SetActive(false);
+       ingredientBarrier.SetActive(false);
+       ingredient.SetActive(false);
 
         sr2 = GameObject.Find("RedSquare").GetComponent<SpriteRenderer>();
         sr3 = GameObject.Find("GreenSquare").GetComponent<SpriteRenderer>();
@@ -38,7 +43,10 @@ public class InteractiveTiles2 : MonoBehaviour
     void Update(){
         //dfsdfs
           if((sr2.color == colorBlack) && (sr3.color == colorBlack) && (sr4.color == colorBlack) && (sr5.color == colorBlack) && (sr6.color == colorBlack)){
-          areaBlocker.SetActive(false); 
+            areaBlocker.SetActive(false); 
+            ingredientArea.SetActive(true);
+            ingredientBarrier.SetActive(true);
+            ingredient.SetActive(true);
 
         }
 
