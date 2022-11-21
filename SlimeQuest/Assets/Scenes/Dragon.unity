@@ -535,7 +535,7 @@ MonoBehaviour:
   - actorID: 0
     message: "And your groveling is spoiling the mood\u2026"
   - actorID: 0
-    message: "Slime! shall grant your request\u2026"
+    message: "Slime! I shall grant your request\u2026"
   - actorID: 1
     message: Really?
   - actorID: 0
@@ -3892,7 +3892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorID: 0
-    message: Now be on your way. And never step food in my abode again. Lest you
+    message: Now be on your way. And never step foot in my abode again. Lest you
       have a death wish.
   - actorID: 1
     message: "Oh thank you great wise dragon\u2026 "
@@ -7893,8 +7893,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -8125,8 +8125,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9102,7 +9102,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 31, y: 161.19104}
+  m_AnchoredPosition: {x: 19.5, y: 207.1}
   m_SizeDelta: {x: -517.0989, y: 156.8747}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1580746636
@@ -9590,8 +9590,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 23}
-  m_SizeDelta: {x: 58.0392, y: 58.0394}
+  m_AnchoredPosition: {x: 88, y: 10}
+  m_SizeDelta: {x: 64.8898, y: 64.8895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1715734776
 PrefabInstance:
@@ -9848,7 +9848,7 @@ PrefabInstance:
     - target: {fileID: 1984787367769115716, guid: 9eb9d1ab51c09fc479cc3b2a211daa69,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 127
+      value: 88.374
       objectReference: {fileID: 0}
     - target: {fileID: 1984787367769115716, guid: 9eb9d1ab51c09fc479cc3b2a211daa69,
         type: 3}
@@ -10623,7 +10623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 10.400024, y: 133.5}
+  m_AnchoredPosition: {x: 598.69, y: 94.3}
   m_SizeDelta: {x: 296.52637, y: 46.6453}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072554676
@@ -10830,7 +10830,7 @@ PrefabInstance:
     - target: {fileID: 504942527503378450, guid: 24726a4dc2b78954aa04e86c5e5f957a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -167
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 504942527503378450, guid: 24726a4dc2b78954aa04e86c5e5f957a,
         type: 3}
