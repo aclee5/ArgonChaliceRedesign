@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8036338808863071890}
   m_Layer: 0
   m_Name: DragonItem
-  m_TagString: DragonItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,3 +127,4 @@ MonoBehaviour:
   itemButton: {fileID: 1111058615740664402, guid: c20e78d931f27174ab36786520daffa5,
     type: 3}
   itemID: 3
+  pickupSound: {fileID: 0}
