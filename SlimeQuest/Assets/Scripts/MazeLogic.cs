@@ -30,6 +30,7 @@ public class MazeLogic : MonoBehaviour
     {
         if(b1Active && b2Active && b3Active){
             ///win condition all buttons pressed can spawn item and then leave
+            
             gateSound.Play();
             Destroy(gate); //remove the gate 
         }
